@@ -1,0 +1,17 @@
+.glossary-item {
+
+	.glossary-item-term {
+        background-color: @drawer-item-color;
+
+        .no-touch &:hover, &.selected {
+            color: @drawer-item-text-color-hover;
+            background-color: @drawer-item-color-hover;
+        }
+
+        .glossary-item-term-inner {
+            font-weight: @font-weight-regular;
+        }
+
+        .transition-all-colors;
+    }
+}

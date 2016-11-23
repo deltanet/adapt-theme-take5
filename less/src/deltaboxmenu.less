@@ -1,0 +1,25 @@
+.menu {
+	.menu-item-button {
+		button {
+			border-radius: @button-radius;
+		}
+	}
+}
+
+.menu-4-col {
+    @media all and (max-width: @device-width-medium) {
+        .menu-item-body {
+            min-height: 10px !important;
+        }
+    }
+    @media all and (min-width: @device-width-medium) {
+        .menu-item-body {
+            min-height: 50px !important;
+        }
+    }
+    @media all and (min-width: @device-width-large) {
+        .menu-item-body {
+            min-height: 80px !important;
+        }
+    }
+}

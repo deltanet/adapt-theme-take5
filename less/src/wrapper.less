@@ -1,0 +1,19 @@
+// Layout
+// ======
+
+#wrapper {
+    width: 100%;
+    margin: auto;
+    overflow-x: hidden;
+    padding-top: (@navigation-padding * 2) + @icon-size;
+    max-width: @max-width;
+
+    @media all and (min-width: (@device-width-popup + 20px)) {
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    }
+
+    .ie8 & {
+        max-width: @ie8-max-width;
+        margin: 0 auto;
+    }
+}

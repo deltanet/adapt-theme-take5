@@ -1,0 +1,64 @@
+.point-gmcq-component {
+
+    .point-gmcq-item label {
+
+        .point-gmcq-answer-icon {
+            color: @item-color;
+            &:before {
+                content: "\e65e";
+            }
+            &:hover {
+                color: @item-color-hover !important;
+            }
+        }
+
+        &:hover {
+            background-color: @item-text-color !important;
+            .point-gmcq-answer-icon{
+                color: @item-color-hover !important;
+                &:before {
+                    content: "\e65d";
+                }
+            }
+        }
+
+        &.selected {
+            color: @item-selected-color;
+            background-color:@item-text-selected-color;
+            .point-gmcq-answer-icon{
+                &:before {
+                    content: "\e65d";
+                }
+            }
+        }
+
+    }
+
+    .point-gmcq-widget {
+        &.disabled {
+            .point-gmcq-item label.selected.disabled {
+                background-color:@item-text-color;
+            }
+        }
+    }
+}
+
+.no-touch {
+    .point-gmcq-component {
+        .point-gmcq-widget {
+            &:not(.disabled) {
+                .point-gmcq-item label:hover {
+                    color:@item-text-hover-color;
+                    background-color:@item-hover-color;
+                }
+                .point-gmcq-item label.disabled {
+                    background-color:@item-disabled-color;
+                    cursor:default;
+                    &:hover{
+                        background: @item-disabled-color;
+                    }
+                }
+            }
+        }
+    }
+}

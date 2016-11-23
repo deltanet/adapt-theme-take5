@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2016 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="shield" unicode="&#xe800;" d="M607 314v357h-250v-634q67 35 119 76 131 103 131 201z m107 429v-429q0-48-18-95t-47-84-66-71-70-57-68-43-50-28-23-11q-7-4-15-4t-14 4q-9 4-24 11t-50 28-68 43-70 57-66 71-46 84-19 95v429q0 14 11 25t25 11h643q14 0 25-11t10-25z" horiz-adv-x="714.3" />
+</font>
+</defs>
+</svg>

@@ -1,0 +1,43 @@
+.hotgrid-audio-component {
+    .notify-popup-arrow {
+        border-radius: @button-radius;
+    }
+	.hotgrid-item-image {
+		border: 3px solid @item-color;
+		&.hotgrid-item-states-image {
+			.no-touch & {
+				&:hover {
+					border: 3px solid @item-color-hover;
+				}
+			}
+		}
+	}
+
+	.hotgrid-grid-item {
+		&.visited {
+			.hotgrid-item-states-image {
+				border: 3px solid @item-color-visited;
+			}
+		}
+	}
+
+	.no-hotgrid-borders {
+		.hotgrid-item-image {
+			border: none;
+			&.hotgrid-item-states-image {
+				.no-touch & {
+					&:hover {
+						border: none;
+					}
+				}
+			}
+		}
+		.hotgrid-grid-item {
+			&.visited {
+				.hotgrid-item-states-image {
+					border: none;
+				}
+			}
+		}
+	}
+}
