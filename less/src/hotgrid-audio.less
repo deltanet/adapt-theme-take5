@@ -1,7 +1,4 @@
 .hotgrid-audio-component {
-    .notify-popup-arrow {
-        border-radius: @button-radius;
-    }
 	.hotgrid-item-image {
 		border: 3px solid @item-color;
 		&.hotgrid-item-states-image {
@@ -21,7 +18,7 @@
 		}
 	}
 
-	.no-hotgrid-borders {
+	&.no-hotgrid-borders {
 		.hotgrid-item-image {
 			border: none;
 			&.hotgrid-item-states-image {
@@ -40,4 +37,14 @@
 			}
 		}
 	}
+
+  &.add-title {
+    .hotgrid-item-title {
+      background-color: @text-background-color-fallback;
+      background-color: @text-background-color;
+      font-weight: @font-weight-bold;
+      padding: @component-padding/2;
+    }
+  }
+
 }
