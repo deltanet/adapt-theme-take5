@@ -38,9 +38,22 @@
         color: @item-text-color;
         border: none;
         background-color: transparent;
+        font-weight: @font-weight-bold;
+
+        &:hover {
+          .gmcq-answer-icon {
+            &.checkbox {
+              border: 3px solid @item-color-hover !important;
+            }
+          }
+        }
 
         .gmcq-answer-icon {
             color: @item-color;
+
+            &.checkbox {
+              border: 3px solid @item-color;
+            }
         }
 
         &.selected {
@@ -77,10 +90,6 @@
             .gmcq-item-inner {
                 color: @item-color-disabled;
             }
-        }
-
-        &.checkbox {
-          border: 3px solid @item-color;
         }
     }
 
