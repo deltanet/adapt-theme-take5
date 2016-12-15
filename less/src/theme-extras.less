@@ -3,6 +3,10 @@
 //---------------------------------------------------------------------
 body {
 	background-color: @main-background-color;
+	// Overide core / base.less
+	p {
+        margin-top: 0;
+    }
 }
 
 //---------------------------------------------------------------------
@@ -19,16 +23,17 @@ li {
 // Add instruction to an item - Used in narrative
 //---------------------------------------------------------------------
 .item-instruction {
-	iteminstruction {
+	.iteminstruction {
 		font-weight: bold;
 	}
-	instr {
+	.instr {
         color:@instruction-color;
+		display: inline-block;
     }
 }
 .notify {
     @media all and (max-width: @device-width-medium) {
-        iteminstruction {
+        .iteminstruction {
 			display: none;
 		}
     }
