@@ -30,12 +30,10 @@
 // Instruction text
 @instruction-color: @interactive-normal-color;
 // Notify
-// White on black
+@bespoke-notify-text-color: #000;
+@bespoke-notify-text-background-color: #fff;
 @overlay-background-color: rgba(0,0,0,0.8);
 @overlay-background-color-fallback: url('assets/transparency-dark.png');
-// Black on white
-//@overlay-background-color: rgba(255,255,255,0.8);
-//@overlay-background-color-fallback: url('assets/transparency-light.png');
 // --------------------------
 // End of course specifics to edit
 // --------------------------
@@ -168,8 +166,8 @@
 @menu-item-progress-border-color: @navigation-progress-border-color;
 
 // Notify
-@notify-color: @text-background-color-fallback;
-@notify-text-color: @text-color;
+@notify-color: @bespoke-notify-text-background-color;
+@notify-text-color: @bespoke-notify-text-color;
 
 @notify-icon-color: @button-color;
 @notify-icon-color-hover: @button-color-hover;
