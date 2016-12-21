@@ -8,6 +8,10 @@
 				}
 			}
 		}
+		img {
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 
 	.hotgrid-grid-item {
@@ -20,11 +24,11 @@
 
 	&.no-hotgrid-borders {
 		.hotgrid-item-image {
-			border: none;
+			border: none !important;
 			&.hotgrid-item-states-image {
 				.no-touch & {
 					&:hover {
-						border: none;
+						border: none !important;
 					}
 				}
 			}
@@ -32,7 +36,7 @@
 		.hotgrid-grid-item {
 			&.visited {
 				.hotgrid-item-states-image {
-					border: none;
+					border: none !important;
 				}
 			}
 		}
