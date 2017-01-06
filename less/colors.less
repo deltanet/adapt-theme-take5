@@ -34,6 +34,10 @@
 @bespoke-notify-text-background-color: #fff;
 @overlay-background-color: rgba(0,0,0,0.8);
 @overlay-background-color-fallback: url('assets/transparency-dark.png');
+// Drawer
+@drawer-background-color: @title-text-color;
+@drawer-inactive-color: @title-background-color;
+@bespoke-drawer-text-color: @title-text-color;
 // --------------------------
 // End of course specifics to edit
 // --------------------------
@@ -112,7 +116,7 @@
 @navigation-progress-border-color: @navigation-text-color;
 
 // Drawer
-@drawer-color: @text-background-color-fallback;
+@drawer-color: @drawer-background-color;
 @drawer-border-color: darken(@drawer-color, 20%);
 
 @drawer-icon-color: @button-color;

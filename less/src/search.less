@@ -1,17 +1,29 @@
 .search-drawer {
 
-    background-color:@primary-color;
+    background-color: @drawer-inactive-color;
     margin-right: -5px;
 
     .drawer-item-open {
         border-bottom: 0px !important;
+        color: @bespoke-drawer-text-color !important;
+        background-color: @drawer-inactive-color !important;
+        
+        &:hover {
+      		background-color: @drawer-inactive-color !important;
+      	}
     }
+
     .search-results {
         margin-top: 0px !important;
         padding: 10px;
     }
+
     .list-item.search {
     	padding: 10px !important;
+    }
+
+    .no-results {
+      color: @bespoke-drawer-text-color !important;
     }
 
 }

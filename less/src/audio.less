@@ -1,10 +1,12 @@
 .audio-drawer {
     .drawer-item-open {
         width: @custom-drawer-width !important;
-        background-color: @primary-color !important;
+        background-color: @drawer-inactive-color !important;
+        color: @bespoke-drawer-text-color !important;
+        border-bottom: 1px solid @drawer-background-color !important;
 
         .no-touch &:hover {
-            background-color: @primary-color !important;
+            background-color: @drawer-inactive-color !important;
         }
     }
     .drawer-audio-toggle {
@@ -20,6 +22,7 @@
 
         .no-touch &:hover {
             background-color: @button-color-hover !important;
+            color: @button-text-color-hover !important;
         }
     }
 }
