@@ -233,6 +233,50 @@ li {
 }
 
 //---------------------------------------------------------------------
+// Full width video in single article
+//---------------------------------------------------------------------
+.single-article-media {
+	overflow: hidden;
+	background-color: transparent;
+	@media all and (max-width: (@device-width-small + 20px)) {
+		min-height: 10px;
+	}
+	.article-inner {
+	  padding: 0px;
+  }
+	.block-inner {
+		max-width: @max-width;
+		margin: 0px;
+		padding: 0px;
+  }
+	.component-inner {
+		padding: 0px;
+  }
+  .component-container,
+  .media-transcript-container,
+  .trickle-button-component {
+    padding-bottom: 0px;
+  }
+  .icon-popup-transcript {
+		left: 0px !important;
+		.dir-rtl & {
+	    right: 0px !important;
+	  }
+		button {
+			border-radius: @button-radius 0px 0px @button-radius;
+			-moz-border-radius: 0px;
+			-webkit-border-radius: @button-radius 0px 0px @button-radius;
+
+			padding-left: @component-padding;
+			.dir-rtl & {
+				padding-left: 10px;
+				padding-right: @component-padding;
+	    }
+		}
+	}
+}
+
+//---------------------------------------------------------------------
 // Full width video
 //---------------------------------------------------------------------
 .full-width-media {
