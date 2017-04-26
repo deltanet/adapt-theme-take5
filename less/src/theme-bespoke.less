@@ -52,3 +52,29 @@
         }
     }
 }
+
+//---------------------------------------------------------------------
+// Smaller component at 70% on the left
+//---------------------------------------------------------------------
+.medium-width-left {
+	@media all and (min-width:@device-width-medium) {
+		max-width: 70%;
+    float: left;
+    .dir-rtl & {
+        float: right;
+    }
+	}
+}
+
+//---------------------------------------------------------------------
+// Smaller component at 70% on the right
+//---------------------------------------------------------------------
+.medium-width-right {
+	@media all and (min-width:@device-width-medium) {
+		max-width: 70%;
+    float: right;
+    .dir-rtl & {
+        float: left;
+    }
+	}
+}
