@@ -11,6 +11,9 @@ body {
 		font-weight: @font-weight-bold;
 		color: @instruction-color;
   }
+	&.unicode-font {
+    font-family: 'Arial Unicode MS' !important;
+  }
 }
 
 //---------------------------------------------------------------------
@@ -21,6 +24,21 @@ ul {
 }
 li {
     list-style-position: outside;
+}
+
+//---------------------------------------------------------------------
+// Subtitles on mediaelement
+//---------------------------------------------------------------------
+.mejs-container {
+	@media all and (min-width: @device-width-medium) {
+		.mejs-captions-position {
+			bottom: 35px;
+		}
+		.mejs-captions-layer {
+			line-height: 35px;
+			font-size: 25px;
+		}
+	}
 }
 
 //---------------------------------------------------------------------
@@ -104,25 +122,26 @@ li {
 .nav-trickle-tab-button {
 	position:fixed;
 	bottom: 0px;
-    left: 50%;
+  left: 50%;
 	width: 80%;
 	margin-left: -40%;
+	text-align: center;
 
-    button {
-        max-width: 200px;
-        padding-left: @button-padding*3;
-        padding-right: @button-padding*3;
+  button {
+    max-width: 200px;
+    padding-left: @button-padding*3;
+    padding-right: @button-padding*3;
+		margin-bottom: 0px !important;
 
-        border-radius: @button-radius @button-radius 0px 0px;
-        -moz-border-radius: 0px;
-        -webkit-border-radius: @button-radius @button-radius 0px 0px;
+		border-radius: 20px 20px 0px 0px !important;
+		-moz-border-radius: 0px !important;
+		-webkit-border-radius: 20px 20px 0px 0px !important;
 
-        // Overide style in buttons.less
-        @media all and (max-width: @device-width-small) {
-            min-height: 5px !important;
-        }
-        margin-bottom: 0px !important;
+    // Overide style in buttons.less
+    @media all and (max-width: @device-width-small) {
+      min-height: 5px !important;
     }
+  }
 }
 
 //---------------------------------------------------------------------
@@ -289,27 +308,27 @@ li {
 		padding-top: @component-padding;
 
 		@media all and (min-width: (@device-width-popup + 20px)) {
-	        padding: 0px;
-	    }
-    }
+			padding: 0px;
+	  }
+  }
 	.block-inner {
 		max-width: @max-width;
 		margin: 0px;
 		padding: 0px;
-    }
-    .component-inner {
+  }
+  .component-inner {
 		padding: 0px;
-    }
-    .component-container,
-    .media-transcript-container,
-    .trickle-button-component {
-    	padding-bottom: 0px;
-    }
-    .icon-popup-transcript {
+  }
+  .component-container,
+  .media-transcript-container,
+  .trickle-button-component {
+    padding-bottom: 0px;
+  }
+  .icon-popup-transcript {
 		left: 0px !important;
 		.dir-rtl & {
-	        right: 0px !important;
-	    }
+			right: 0px !important;
+	  }
 		button {
 			border-radius: @button-radius 0px 0px @button-radius;
 			-moz-border-radius: 0px;
@@ -319,7 +338,14 @@ li {
 			.dir-rtl & {
 				padding-left: 10px;
 				padding-right: @component-padding;
-	        }
+	    }
+		}
+	}
+	.media-options-container {
+		right: 0px !important;
+		.dir-rtl & {
+			right: inherit !important;
+			left: 0px !important;
 		}
 	}
 }
