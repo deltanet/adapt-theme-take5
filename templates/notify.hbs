@@ -1,4 +1,4 @@
-<div class="notify-popup notify-type-{{_type}} {{_classes}}" role="region" aria-label="{{_globals._accessibility._ariaLabels.feedbackPopUp}}">
+<div {{#each _attributes}}{{@key}}="{{this}}" {{/each}} class="notify-popup notify-type-{{_type}} {{_classes}}" role="region" aria-label="{{_globals._accessibility._ariaLabels.feedbackPopUp}}">
     <div class="notify-popup-inner">
         <div class="notify-popup-content">
             <div class="notify-popup-content-inner">
@@ -44,7 +44,7 @@
         {{#if_value_equals _type "popup"}}
         <div class="notify-popup-buttons">
             <button class="notify-popup-button notify-popup-done" aria-label="{{_globals._accessibility._ariaLabels.closePopup}}">
-                Close
+                {{{_globals._accessibility._ariaLabels.closePopup}}}
             </button>
         </div>
         {{/if_value_equals}}

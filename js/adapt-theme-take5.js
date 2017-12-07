@@ -2,21 +2,38 @@ define(function(require) {
 
 	var Adapt = require('coreJS/adapt');
 	var Backbone = require('backbone');
-	var ThemeBlock = require('theme/adapt-theme-take5/js/theme-block');
 
-	// Block View
-	// ==========
+	var ThemeFont = _.extend({
 
-	Adapt.on('blockView:postRender', function(view) {
-		var theme = view.model.get('_theme');
-		
-		if (theme) {
-			new ThemeBlock({
-				model: new Backbone.Model({
-					_themeBlockConfig: theme
-				}),
-				el: view.$el
-			});
+    initialize: function() {
+        this.listenToOnce(Adapt, "app:dataReady", this.onDataReady);
+    },
+
+    onDataReady: function() {
+        this.setupEventListeners();
+				this.setFont();
+    },
+
+    setupEventListeners: function() {
+			this.listenTo(Adapt, 'remove', this.remove);
+			this.listenTo(Adapt, 'languagepicker:changelanguage:yes', this.setFont);
+    },
+
+		setFont: function() {
+			_.delay(_.bind(function(){
+				var language = Adapt.offlineStorage.get("lang");
+				$('body').removeClass("unicode-font");
+				// Hindi - Marathi - Macedonian - Polish
+	      if(language == "hi" | language == "mr" | language == "mk" | language == "pl") {
+	        $('body').addClass("unicode-font");
+	      }
+      }, this), 500);
 		}
-	});
+
+	}, Backbone.Events);
+
+	ThemeFont.initialize();
+
+	return ThemeFont;
+
 });

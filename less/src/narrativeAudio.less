@@ -133,6 +133,10 @@
             margin-left: 13%;
             z-index: 11;
             width: 50%;
+            background: @text-background-color;
+            .no-opacity & {
+                background: @text-background-color-fallback;
+            }
         }
     }
 }

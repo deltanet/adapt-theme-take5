@@ -1,5 +1,12 @@
 .article-block-slider-enabled {
 
+	.toolbar-progress {
+	    background-color: @item-color;
+	    &.selected {
+	        background-color: @item-color-selected;
+	    }
+	}
+
 	.trickle-button-component {
 		padding-bottom: 0px;
 	}
@@ -12,12 +19,6 @@
 
 	///// Bottom navigation /////
 	&.article-blockslider-bottomnav {
-
-		@media all and (min-width: (@device-width-small + 20px)) {
-	        .block {
-				min-height: 540px;
-			}
-	    }
 
 		.article-block-organise {
 			padding-bottom: @block-padding;
@@ -47,7 +48,6 @@
 		}
 
 		.article-block-bottombar {
-			position: absolute;
 	        padding-top: 22px;
 	        width: 100%;
 	        max-width: @device-width-large;
@@ -109,20 +109,17 @@
 
 	}
 
-
 	///// Full width /////
-	&.article-blockslider-fullwidth {
-
-		@media all and (min-width: (@device-width-small + 20px)) {
-			.block {
-				min-height: 654px;
-			}
-		}
+	&.fullwidth {
 
 		&.article {
 			.article-inner {
 				max-width: @max-width;
 			}
+		}
+
+		.component-container {
+			padding-bottom: 0px !important;
 		}
 
 		.item-button-arrow {
@@ -134,16 +131,12 @@
 		}
 
 		.article-block-bottombar {
-			position: absolute;
 			top: 0px;
 			left: 0px;
 			width: 100%;
 			padding-top: @component-padding;
 			padding-bottom: @component-padding;
-			background-color: @text-background-color;
-			.no-opacity & {
-	            background-color: @text-background-color-fallback;
-	        }
+			background-color: transparent;
 			max-width: @max-width;
 		}
 
@@ -154,9 +147,10 @@
 		.has-arrows {
 			.block {
 				.block-inner {
+					margin-top: @component-padding;
 					// Added padding for arrow navigation
 					@media all and (min-width: @device-width-medium) {
-						padding: @block-padding-top 70px @block-padding-bottom;
+						padding: 8px 70px 8px;
 					}
 
 					.ie8 & {

@@ -50,7 +50,6 @@
 
 // Drawer PLP
 // ==========
-
 .drawer {
     .page-level-progress-item-title {
         background-color: @drawer-item-color;
@@ -115,7 +114,6 @@
 }
 
 .page-level-progress-indicator-complete {
-
     .page-level-progress-indicator-bar {
         display: none;
         .transition-background-color;
@@ -124,7 +122,9 @@
 
 .menu {
     .page-level-progress-menu-item-indicator {
-        height: 10px;
+      border: none;
+      height: 10px;
+      background-color: @navigation-progress-background-color;
     }
     .page-level-progress-menu-item-indicator-bar {
         background-color: @menu-item-progress-fill-color;
