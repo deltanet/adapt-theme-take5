@@ -1,13 +1,20 @@
 .slider-component {
-
-    .slider-scaler-wrapper {
-
-        .slider-scaler {
-          background-color: @item-body-text-color;
-        }
+  .slider-scale-number {
+    &:hover {
+      .no-touch & {
+          color: @item-hover-color;
+      }
     }
+  }
 
-    .slider-model-answer,
+  .slider-scaler-wrapper {
+
+    .slider-scaler {
+        background-color: @item-body-text-color;
+    }
+  }
+
+  .slider-model-answer,
     .slider-scale-marker {
         color: @item-text-color;
         background-color: @item-color;
