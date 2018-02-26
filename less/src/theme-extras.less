@@ -30,13 +30,28 @@ li {
 // Subtitles on mediaelement
 //---------------------------------------------------------------------
 .mejs-container {
+	.mejs-captions-position {
+		background-color: @primary-color;
+	}
+	.mejs-captions-layer {
+		color: @primary-color-inverted;
+	}
+	.mejs-captions-text {
+		font-size: @body-text-font-size;
+		background-color: transparent;
+		background-image: none;
+	}
 	@media all and (min-width: @device-width-medium) {
 		.mejs-captions-position {
 			bottom: 35px;
+      border-radius: 10px;
+			left: 5%;
+      width: 90%;
+			padding: @item-padding / 2;
 		}
-		.mejs-captions-layer {
-			line-height: 35px;
-			font-size: 25px;
+		.mejs-captions-text {
+			font-size: @sub-title-font-size;
+			line-height: @sub-title-line-height;
 		}
 	}
 }

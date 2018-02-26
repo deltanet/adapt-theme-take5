@@ -1,7 +1,7 @@
 # adapt-theme-take5
 
 ----------------------------
-**Version number:**  2.2.1   
+**Version number:**  2.2.2   
 **Framework versions:**  2+     
 **Author / maintainer:** Adapt Core Team and DeltaNet  
 **Accessibility support:** WAI AA   
