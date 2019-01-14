@@ -870,5 +870,26 @@ USAGE:   (Left) Interactive component / (Right) Graphic
 	}
 }
 //---------------------------------------------------------------------
+// Take5 Banner
+//---------------------------------------------------------------------
+@font-face {
+	font-family: 'Ubuntu';
+	src: 	    url('fonts/Ubuntu-R.ttf') format('truetype'),
+						url('fonts/Ubuntu-B.ttf') format('truetype'),
+						url('fonts/Ubuntu-RI.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+.take5-banner {
+	.grid-item-body {
+			font-family: 'Ubuntu' !important;
+		&.unicode-font {
+			font-family: 'Arial Unicode MS' !important;
+			}
+		}
+}
+
+
+//---------------------------------------------------------------------
 // End of Take 5 Specific
 //---------------------------------------------------------------------
