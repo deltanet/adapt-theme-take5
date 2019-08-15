@@ -1,0 +1,13 @@
+.search-drawer {
+    &.drawer-item-open,
+    .drawer-item-open,
+    .drawer-item-search {
+        background-color: @drawer-inactive-color !important;
+        color: @bespoke-drawer-text-color !important;
+        border-bottom: 1px solid @drawer-inactive-color !important;
+
+        .no-touch &:hover {
+            background-color: @drawer-inactive-color !important;
+        }
+    }
+}

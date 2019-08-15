@@ -1,13 +1,13 @@
 {
-  "name": "adapt-theme-take5",
-  "version": "2.2.8",
-  "framework": ">=2",
-  "homepage": "https://github.com/deltanet/adapt-theme-take5",
-  "issues": "https://github.com/deltanet/adapt-theme-take5/issues",
-  "displayName": "DeltaNet's Take5 Standard Theme",
-  "theme": "adapt-theme-take5",
-  "description": "A theme for DeltaNet's Take5 courses.",
-  "main": "js/adapt-theme-take5.js",
+  "name": "adapt-theme-delta-editable",
+  "version": "1.0.1",
+  "framework": ">=4",
+  "homepage": "https://github.com/deltanet/adapt-theme-delta-editable",
+  "issues": "https://github.com/deltanet/adapt-theme-delta-editable/issues/",
+  "displayName": "DeltaNet's Editable Theme",
+  "theme": "adapt-theme-delta-editable",
+  "description": "",
+  "main": "js/adapt-theme-delta-editable.js",
   "keywords": [
     "adapt-plugin",
     "adapt-theme"

@@ -1,24 +1,525 @@
 {
-  "type":"object",
+  "type": "object",
   "$schema": "http://json-schema.org/draft-04/schema",
   "id": "http://jsonschema.net",
   "$ref": "http://localhost/plugins/content/theme/model.schema",
-  "properties":{
-    "_screenSize": {
-      "type":"object",
-      "required":true,
-      "properties":{
-        "large": {
-          "type":"string",
-          "required":true
-        },
-        "medium": {
-          "type":"string",
-          "required":true
-        },
-        "small": {
-          "type":"string",
-          "required":true
+  "properties": {
+    "variables": {
+      "_generic": {
+        "type": "object",
+        "required": false,
+        "legend": "Generic",
+        "properties": {
+          "body-text-font-size": {
+            "title": "Body Text Size",
+            "type": "string",
+            "inputType": "Text",
+            "default": "14px"
+          },
+          "text-color": {
+            "title": "Body Text Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#000"
+          },
+          "text-background-color": {
+            "title": "Body Background Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#fff"
+          },
+          "instruction-text-font-size": {
+            "title": "Instruction Text Size",
+            "type": "string",
+            "inputType": "Text",
+            "default": "14px"
+          },
+          "instruction-color": {
+            "title": "Instruction Highlight Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#F26100",
+            "help": "Wrap the text within <instr></instr> tags to use this colour within the instruction text fields."
+          },
+          "icon-size": {
+            "title": "Icon Size",
+            "type": "string",
+            "inputType": "Text",
+            "default": "24px"
+          },
+          "validation-error": {
+            "title": "Validation Error",
+            "help": "This is the validation error colour, and is applied to elements which display an incorrect field.",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#d30606"
+          },
+          "validation-success": {
+            "title": "Validation Success",
+            "help": "This is the validation success colour, and is applied to elements which display a correct field.",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#109f10"
+          }
+        }
+      },
+      "_buttons": {
+        "type": "object",
+        "required": false,
+        "legend": "Buttons",
+        "properties": {
+          "interactive-color": {
+            "title": "Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#F26100"
+          },
+          "interactive-color-hover": {
+            "title": "Hover Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#37474f"
+          },
+          "interactive-color-selected": {
+            "title": "Selected Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#37474f"
+          },
+          "interactive-color-visited": {
+            "title": "Visited Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#727272"
+          },
+          "interactive-color-disabled": {
+            "title": "Disabled Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#727272"
+          },
+          "button-text-font-size": {
+            "title": "Text Size",
+            "type": "string",
+            "inputType": "Text",
+            "default": "14px"
+          },
+          "interactive-text-color": {
+            "title": "Text Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#fff"
+          },
+          "interactive-text-color-hover": {
+            "title": "Text Hover Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#fff"
+          },
+          "interactive-text-color-selected": {
+            "title": "Text Selected Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#fff"
+          },
+          "interactive-text-color-visited": {
+            "title": "Text Visited Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#ccc"
+          },
+          "interactive-text-color-disabled": {
+            "title": "Text Disabled Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#ccc"
+          },
+          "button-border": {
+            "title": "Border",
+            "type": "string",
+            "inputType": "Text",
+            "default": "0px solid"
+          },
+          "button-border-color": {
+            "title": "Border Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#F26100"
+          },
+          "button-border-color-hover": {
+            "title": "Border Hover Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#37474f"
+          },
+          "button-border-color-disabled": {
+            "title": "Border Disabled Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#727272"
+          },
+          "button-padding": {
+            "title": "Padding",
+            "type": "string",
+            "inputType": "Text",
+            "default": "15px"
+          },
+          "button-radius": {
+            "title": "Corner Radius",
+            "type": "string",
+            "inputType": "Text",
+            "default": "0px"
+          }
+        }
+      },
+      "_navigation": {
+        "type": "object",
+        "required": false,
+        "legend": "Navigation Bar",
+        "properties": {
+          "navigation-text-color": {
+            "title": "Text Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#fff"
+          },
+          "navigation-bg-color": {
+            "title": "Background Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#000"
+          },
+          "navigation-icon-color": {
+            "title": "Icon Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#fff"
+          },
+          "navigation-icon-color-hover": {
+            "title": "Icon Hover Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#37474f"
+          },
+          "navigation-padding": {
+            "title": "Icon Padding",
+            "type": "string",
+            "inputType": "Text",
+            "default": "12px"
+          },
+          "navigation-shadow": {
+            "title": "Shadow",
+            "type": "string",
+            "inputType": "Text",
+            "default": "0px 2px 5px 0px rgba(0,0,0,0.26)"
+          }
+        }
+      },
+      "_page": {
+        "type": "object",
+        "required": false,
+        "legend": "Page",
+        "properties": {
+          "max-width": {
+            "title": "Maximum Page Width",
+            "type": "string",
+            "inputType": "Text",
+            "default": "1400px"
+          },
+          "page-title-font-size": {
+            "title": "Title Size",
+            "type": "string",
+            "inputType": "Text",
+            "default": "32px"
+          },
+          "page-title-font-weight": {
+            "title": "Title Weight",
+            "type": "string",
+            "inputType": {"type": "Select", "options": ["@font-weight-light", "@font-weight-regular", "@font-weight-medium", "@font-weight-bold"]},
+            "default": "@font-weight-medium"
+          },
+          "page-title-line-height": {
+            "title": "Title Line Height",
+            "type": "string",
+            "inputType": "Text",
+            "default": "120%"
+          },
+          "page-title-text-color": {
+            "title": "Title Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#fff"
+          },
+          "page-title-background-color": {
+            "title": "Title Background Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#546e7a"
+          },
+          "page-background-color": {
+            "title": "Background Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#343434"
+          },
+          "page-shadow": {
+            "title": "Shadow",
+            "type": "string",
+            "inputType": "Text",
+            "default": "0px 0px 10px 0px rgba(0,0,0,0.5)"
+          }
+        }
+      },
+      "_menu": {
+        "type": "object",
+        "required": false,
+        "legend": "Menu",
+        "properties": {
+          "menu-title-font-size": {
+            "title": "Title Size",
+            "type": "string",
+            "inputType": "Text",
+            "default": "32px"
+          },
+          "menu-title-font-weight": {
+            "title": "Title Weight",
+            "type": "string",
+            "inputType": {"type": "Select", "options": ["@font-weight-light", "@font-weight-regular", "@font-weight-medium", "@font-weight-bold"]},
+            "default": "@font-weight-medium"
+          },
+          "menu-title-line-height": {
+            "title": "Title Line Height",
+            "type": "string",
+            "inputType": "Text",
+            "default": "120%"
+          },
+          "menu-background-color": {
+            "title": "Background Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#343434"
+          }
+        }
+      },
+      "_article": {
+        "type": "object",
+        "required": false,
+        "legend": "Article",
+        "properties": {
+          "article-title-font-size": {
+            "title": "Title Size",
+            "type": "string",
+            "inputType": "Text",
+            "default": "24px"
+          },
+          "article-title-font-weight": {
+            "title": "Title Weight",
+            "type": "string",
+            "inputType": {"type": "Select", "options": ["@font-weight-light", "@font-weight-regular", "@font-weight-medium", "@font-weight-bold"]},
+            "default": "@font-weight-medium"
+          },
+          "article-title-line-height": {
+            "title": "Title Line Height",
+            "type": "string",
+            "inputType": "Text",
+            "default": "120%"
+          },
+          "article-title-text-color": {
+            "title": "Title Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#fff"
+          },
+          "article-title-background-color": {
+            "title": "Title Background Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#546e7a"
+          },
+          "article-padding": {
+            "title": "Padding",
+            "type": "string",
+            "inputType": "Text",
+            "default": "0px"
+          }
+        }
+      },
+      "_block": {
+        "type": "object",
+        "required": false,
+        "legend": "Block",
+        "properties": {
+          "block-title-font-size": {
+            "title": "Title Size",
+            "type": "string",
+            "inputType": "Text",
+            "default": "22px"
+          },
+          "block-title-font-weight": {
+            "title": "Title Weight",
+            "type": "string",
+            "inputType": {"type": "Select", "options": ["@font-weight-light", "@font-weight-regular", "@font-weight-medium", "@font-weight-bold"]},
+            "default": "@font-weight-regular"
+          },
+          "block-title-line-height": {
+            "title": "Title Line Height",
+            "type": "string",
+            "inputType": "Text",
+            "default": "120%"
+          },
+          "block-title-text-color": {
+            "title": "Title Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#fff"
+          },
+          "block-title-background-color": {
+            "title": "Title Background Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#546e7a"
+          },
+          "block-padding": {
+            "title": "Padding",
+            "type": "string",
+            "inputType": "Text",
+            "default": "0px"
+          }
+        }
+      },
+      "_component": {
+        "type": "object",
+        "required": false,
+        "legend": "Component",
+        "properties": {
+          "component-title-font-size": {
+            "title": "Title Size",
+            "type": "string",
+            "inputType": "Text",
+            "default": "22px"
+          },
+          "component-title-font-weight": {
+            "title": "Title Weight",
+            "type": "string",
+            "inputType": {"type": "Select", "options": ["@font-weight-light", "@font-weight-regular", "@font-weight-medium", "@font-weight-bold"]},
+            "default": "@font-weight-regular"
+          },
+          "component-title-line-height": {
+            "title": "Title Line Height",
+            "type": "string",
+            "inputType": "Text",
+            "default": "120%"
+          },
+          "component-title-text-color": {
+            "title": "Title Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#fff"
+          },
+          "component-title-background-color": {
+            "title": "Title Background Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#546e7a"
+          },
+          "item-title-font-size": {
+            "title": "Item Title Size",
+            "type": "string",
+            "inputType": "Text",
+            "default": "14px"
+          },
+          "item-padding": {
+            "title": "Item Padding",
+            "type": "string",
+            "inputType": "Text",
+            "default": "10px"
+          },
+          "sub-title-font-size": {
+            "title": "Sub Title Size",
+            "type": "string",
+            "inputType": "Text",
+            "default": "14px"
+          },
+          "component-padding": {
+            "title": "Padding",
+            "type": "string",
+            "inputType": "Text",
+            "default": "0px"
+          }
+        }
+      },
+      "_notify": {
+        "type": "object",
+        "required": false,
+        "legend": "Notify Popup",
+        "properties": {
+          "notify-title-font-size": {
+            "title": "Title Size",
+            "type": "string",
+            "inputType": "Text",
+            "default": "22px"
+          },
+          "notify-title-font-weight": {
+            "title": "Title Weight",
+            "type": "string",
+            "inputType": {"type": "Select", "options": ["@font-weight-light", "@font-weight-regular", "@font-weight-medium", "@font-weight-bold"]},
+            "default": "@font-weight-bold"
+          },
+          "notify-title-line-height": {
+            "title": "Title Line Height",
+            "type": "string",
+            "inputType": "Text",
+            "default": "120%"
+          },
+          "bespoke-notify-text-color": {
+            "title": "Text Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#000"
+          },
+          "bespoke-notify-text-background-color": {
+            "title": "Popup Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#fff"
+          },
+          "overlay-background-color": {
+            "title": "Background Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "rgba(0,0,0,0.8)"
+          },
+          "notify-padding": {
+            "title": "Padding",
+            "type": "string",
+            "inputType": "Text",
+            "default": "30px"
+          }
+        }
+      },
+      "_drawer": {
+        "type": "object",
+        "required": false,
+        "legend": "Drawer",
+        "properties": {
+          "bespoke-drawer-text-color": {
+            "title": "Item Text Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#fff"
+          },
+          "drawer-inactive-color": {
+            "title": "Item Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#000"
+          },
+          "drawer-background-color": {
+            "title": "Background Colour",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#fff"
+          }
         }
       }
     }

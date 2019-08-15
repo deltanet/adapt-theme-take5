@@ -1,0 +1,122 @@
+// narrativeAudio styling
+// ==================
+.narrativeAudio-component {
+
+  .narrativeAudio-widget {
+    background: @text-background-color;
+    .no-opacity & {
+      background: @text-background-color-fallback;
+    }
+  }
+
+  .narrativeAudio-controls {
+		top: 52%;
+	}
+
+  .narrativeAudio-control-left {
+    border-radius: 0 @button-radius @button-radius 0;
+
+    .dir-rtl & {
+      border-radius: @button-radius 0 0 @button-radius;
+    }
+  }
+
+  .narrativeAudio-control-right {
+    border-radius: @button-radius 0 0 @button-radius;
+
+    .dir-rtl & {
+      border-radius: 0 @button-radius @button-radius 0;
+    }
+  }
+
+  &.mode-large {
+    .narrativeAudio-slide-container {
+      margin-right: 0;
+      .dir-rtl & {
+        margin-left: 0;
+      }
+    }
+	}
+
+  .narrativeAudio-content-title {
+    margin-bottom: @title-text-margin;
+    .sub-title;
+  }
+
+  .narrativeAudio-content {
+    background: transparent;
+    color: @text-color;
+    width: 50%;
+  }
+
+  .narrativeAudio-indicators,
+  .narrativeAudio-slider-graphic {
+    background: transparent;
+  }
+
+  .narrativeAudio-progress {
+    background-color: @item-color;
+    &.selected {
+      background-color: @item-color-selected;
+    }
+  }
+
+  .narrativeAudio-strapline-title {
+    color: @item-text-color;
+
+    .item-title;
+
+    .icon {
+      padding: @item-padding-top @item-padding-right @item-padding-bottom;
+      color: @item-text-color;
+    }
+
+    &:hover {
+      background-color: @item-color-hover;
+      color: @item-text-color-hover;
+
+      .icon {
+        color: @item-text-color-hover;
+      }
+    }
+
+    &.visited {
+      background-color: @item-color-visited;
+    }
+  }
+
+  .narrativeAudio-strapline-title-inner {
+    padding-left: (@item-padding-left);
+    padding-right: (@item-padding-left + @item-padding-right + @icon-size);
+
+    .dir-rtl & {
+      padding-right: (@item-padding-left);
+      padding-left: (@item-padding-left + @item-padding-right + @icon-size);
+    }
+  }
+
+}
+
+//======= narrativeAudio FULL WIDTH ========//
+.narrative-full-width {
+  &.mode-large {
+    .narrativeAudio-slide-container,
+    .narrativeAudio-slider-graphic {
+      width: 100%;
+    }
+
+    .narrativeAudio-content {
+      float: left;
+      position: absolute;
+      margin-top: @component-padding;
+      margin-left: 13%;
+      z-index: 11;
+      width: 50%;
+      background: @text-background-color;
+      .no-opacity & {
+        background: @text-background-color-fallback;
+      }
+    }
+  }
+}
+//=====================================//

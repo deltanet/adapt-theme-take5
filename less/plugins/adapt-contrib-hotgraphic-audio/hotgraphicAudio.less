@@ -1,0 +1,58 @@
+.hotgraphicAudio-component {
+
+	.hotgraphicAudio-graphic-pin {
+		.hotgraphicAudio-graphic-pin-icon {
+			background-color: @item-color;
+			border: 2px solid @item-text-color;
+			color: @item-text-color;
+			padding: @item-padding;
+			font-size: (@icon-size*1.5);
+			width: auto;
+			height: auto;
+		}
+		&.visited {
+			.hotgraphicAudio-graphic-pin-icon {
+				background-color: @item-color-visited;
+				border: 2px solid @item-text-color;
+				color: @item-text-color;
+			}
+			.icon:before {
+				font-family: 'vanilla' !important;
+				content: "\e633" !important;
+			}
+		}
+		.no-touch &:hover {
+			.hotgraphicAudio-graphic-pin-icon {
+				color: @item-text-color;
+				background-color: @item-color-hover;
+				border: 2px solid @item-text-color;
+			}
+		}
+
+		.hotgraphicAudio-graphic-pin-text {
+			background-color: @item-color;
+			border: 2px solid @item-text-color;
+			color: @item-text-color;
+		}
+		&.visited {
+			.hotgraphicAudio-graphic-pin-text {
+				background-color: @item-color-visited;
+				border: 2px solid @item-text-color;
+				color: @item-text-color;
+			}
+		}
+		.no-touch &:hover {
+			.hotgraphicAudio-graphic-pin-text {
+				color: @item-text-color;
+				background-color: @item-color-hover;
+				border: 2px solid @item-text-color;
+			}
+		}
+	}
+
+  .hotgraphicAudio-popup-close,
+  .hotgraphicAudio-popup-arrow {
+		border-radius: @button-radius;
+  }
+
+}

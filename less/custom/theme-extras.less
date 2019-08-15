@@ -1,0 +1,804 @@
+// Component background - used to apply variable based background color and padding on components
+// ====================
+
+.component-background {
+	background-color: @component-background-color;
+	padding: @component-padding;
+}
+
+//---------------------------------------------------------------------
+// Set page colour
+//---------------------------------------------------------------------
+body {
+	background-color: @page-background-color;
+	// Overide core / base.less
+	p {
+    margin-top: 0;
+  }
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	a {
+		font-weight: @font-weight-bold;
+		color: @instruction-color;
+  }
+
+	&.unicode-font {
+    font-family: 'Arial Unicode MS' !important;
+  }
+}
+
+//---------------------------------------------------------------------
+// Accessibility focus
+//---------------------------------------------------------------------
+.button, button {
+    outline: none;
+}
+
+input {
+		outline: none;
+}
+
+//---------------------------------------------------------------------
+// Set bullet point style
+//---------------------------------------------------------------------
+ul {
+    padding-left: @component-padding;
+		margin-bottom: @component-padding;
+}
+li {
+    list-style-position: outside;
+}
+
+//---------------------------------------------------------------------
+// Subtitles on mediaelement
+//---------------------------------------------------------------------
+.mejs-container {
+	.mejs-captions-position {
+		background-color: @primary-color;
+	}
+	.mejs-captions-layer {
+		color: @primary-color-inverted;
+	}
+	.mejs-captions-text {
+		font-size: @body-text-font-size;
+		background-color: transparent;
+		background-image: none;
+	}
+	@media all and (min-width: @device-width-medium) {
+		.mejs-captions-position {
+			bottom: 35px;
+      border-radius: 10px;
+			left: 5%;
+      width: 90%;
+			padding: @item-padding / 2;
+		}
+		.mejs-captions-text {
+			font-size: @sub-title-font-size;
+			line-height: @sub-title-line-height;
+		}
+	}
+}
+
+//---------------------------------------------------------------------
+// Remove article min-height
+//---------------------------------------------------------------------
+.remove-minHeight {
+    min-height: 10px;
+}
+
+//---------------------------------------------------------------------
+// Remove 'Show feedback' button on question component
+// Applied to assessment article
+//---------------------------------------------------------------------
+.remove-showFeedback {
+    .buttons-feedback {
+        display: none;
+    }
+    .buttons-marking-icon {
+        position: relative;
+        margin-top: -10px;
+        margin-bottom: 10px;
+    }
+    .buttons {
+	    	text-align: center;
+	    	button {
+	    		float: none;
+			    width: auto;
+	    	}
+    }
+}
+
+//---------------------------------------------------------------------
+// Add to nav-link to mimic the Trickle button
+//---------------------------------------------------------------------
+.nav-trickle-tab-button {
+	position: fixed;
+	bottom: 0px;
+  left: 50%;
+	width: 80%;
+	margin-left: -40%;
+	text-align: center;
+
+  button {
+    max-width: 200px;
+    padding-left: @button-padding*3;
+    padding-right: @button-padding*3;
+		margin-bottom: 0px !important;
+
+		border-radius: 20px 20px 0px 0px !important;
+		-moz-border-radius: 0px !important;
+		-webkit-border-radius: 20px 20px 0px 0px !important;
+
+    // Overide style in buttons.less
+    @media all and (max-width: @device-width-small) {
+      min-height: 5px !important;
+    }
+  }
+}
+
+//---------------------------------------------------------------------
+// Add instruction color to menu body text
+//---------------------------------------------------------------------
+.menu-body {
+	instr {
+		font-weight: @font-weight-bold;
+		color: @instruction-color;
+  }
+}
+
+//---------------------------------------------------------------------
+// This is used in theme-block.js so leave in for reference
+//---------------------------------------------------------------------
+.divider-block {
+}
+
+//---------------------------------------------------------------------
+// Remove menu header if no title or body is used
+//---------------------------------------------------------------------
+.remove-menu-header {
+  .menu-header {
+    display: none;
+  }
+}
+
+//---------------------------------------------------------------------
+// Remove page header if no title is used
+//---------------------------------------------------------------------
+.remove-page-header {
+	.page-header {
+		display: none;
+	}
+}
+
+//---------------------------------------------------------------------
+// Use either of these if the page header is utilised
+//---------------------------------------------------------------------
+.firstArticle {
+	@media all and (min-width: (@device-width-small + 20px)) {
+		// Main height minus the page header height
+    min-height: @content-height - 78px;
+  }
+}
+
+.firstBlock {
+	@media all and (min-width: (@device-width-small + 20px)) {
+		// Main height minus the page header height
+    min-height: @content-height - 78px;
+  }
+}
+
+//---------------------------------------------------------------------
+// Use this to add min height to assessment article questions
+//---------------------------------------------------------------------
+.add-min-height-block {
+	.block {
+		@media all and (min-width: (@device-width-small + 20px)) {
+			min-height: @content-height;
+	  }
+	}
+}
+
+//---------------------------------------------------------------------
+// Disclaimer text styling
+//---------------------------------------------------------------------
+.disclaimer,
+.body-link {
+	font-weight: bold;
+	text-decoration: underline !important;
+	color: @button-color !important;
+	&:hover {
+		color: @button-color-hover !important;
+	}
+}
+
+//---------------------------------------------------------------------
+// Question Icon
+// -- Add class to component classes json field
+//---------------------------------------------------------------------
+.question-icon {
+	.component-body {
+		background-image: url(assets/question-icon.png);
+		background-repeat:no-repeat;
+		background-position: top left;
+		padding-left: 80px;
+		padding-top: @component-padding*2;
+		min-height: 40px;
+
+		.dir-rtl & {
+			background-image: url(assets/question-icon-rtl.png);
+			background-position: top right;
+			padding-left: @component-padding;
+			padding-right: 80px;
+    }
+	}
+	.component-instruction {
+		padding-left: 80px;
+		.dir-rtl & {
+			padding-left: @component-padding;
+			padding-right: 80px;
+    }
+	}
+}
+
+//---------------------------------------------------------------------
+// Resize video - 80%
+//---------------------------------------------------------------------
+.resize-video-80-pc {
+	@media all and (min-width:@device-width-medium) {
+		.component-widget,
+		.media-transcript-container {
+			width: 80% !important;
+			margin: 0 auto;
+		}
+
+		.media-instruction-container {
+			left: 11.4% !important;
+			.dir-rtl & {
+				left: 0 !important;
+				right: 11.4% !important;
+			}
+			@media all and (min-width: (@device-width-small)) {
+				left: 0 !important;
+				right: 0 !important;
+			}
+		}
+
+		.media-options-container {
+			right: 11.4% !important;
+			.dir-rtl & {
+				right: inherit !important;
+				left: 11.4% !important;
+			}
+			@media all and (min-width: (@device-width-small)) {
+				left: 0 !important;
+				right: 0 !important;
+			}
+		}
+	}
+}
+
+//---------------------------------------------------------------------
+// Full width video in single article
+//---------------------------------------------------------------------
+.single-article-media {
+	overflow: hidden;
+	background-color: transparent;
+	@media all and (max-width: (@device-width-small + 20px)) {
+		min-height: 10px;
+	}
+
+	.article-inner {
+	  padding: 0px;
+  }
+
+	.block-inner {
+		max-width: @max-width;
+		margin: 0px;
+		padding: 0px;
+  }
+
+	.component-inner {
+		padding: 0px;
+  }
+
+  .component-container,
+  .media-transcript-container,
+  .trickle-button-component {
+    padding-bottom: 0px;
+  }
+}
+
+//---------------------------------------------------------------------
+// Full width video
+//---------------------------------------------------------------------
+.full-width-media {
+	@media all and (max-width: (@device-width-small + 20px)) {
+		min-height: 10px;
+	}
+	.article-inner {
+		padding: @component-padding *2;
+		padding-top: @component-padding;
+
+		@media all and (min-width: (@device-width-popup + 20px)) {
+			padding: 0px;
+		}
+	}
+
+	.block-inner {
+		max-width: @max-width;
+		margin: 0px;
+		padding: 0px;
+  }
+
+  .component-inner {
+		padding: 0px;
+  }
+
+  .component-container,
+  .media-transcript-container,
+  .trickle-button-component {
+		padding-bottom: 0px;
+  }
+
+	.media-options-container {
+		right: 0px !important;
+		.dir-rtl & {
+			right: inherit !important;
+			left: 0px !important;
+		}
+	}
+}
+
+//---------------------------------------------------------------------
+// Remove padding for assessment results
+//---------------------------------------------------------------------
+.remove-widget-padding {
+	.component-widget {
+		padding: 0px !important;
+	}
+}
+
+//---------------------------------------------------------------------
+// Icon-popup transcript button on top of video
+//---------------------------------------------------------------------
+.icon-popup-transcript {
+	position: absolute;
+	max-width: 3000px !important;
+	top: @component-padding !important;
+	left: -@component-padding !important;
+	.dir-rtl & {
+		left: @component-padding !important;
+    right: -@component-padding !important;
+  }
+
+	button {
+		border-radius: 0px 0px 0px @button-radius;
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 0px 0px 0px @button-radius;
+
+		padding-left: @component-padding;
+		.dir-rtl & {
+			padding-left: 10px;
+			padding-right: @component-padding;
+		}
+	}
+}
+
+//---------------------------------------------------------------------
+// Remove Complete -- Block Title -- Container Background
+//---------------------------------------------------------------------
+.remove-bg-block-title {
+	.block-title {
+		background-color: transparent;
+	}
+}
+
+//---------------------------------------------------------------------
+// Remove Complete -- Block Body Inner -- Container Background
+//---------------------------------------------------------------------
+.remove-bg-block-body-inner {
+	.block-body-inner {
+		background-color: transparent;
+	}
+}
+
+//---------------------------------------------------------------------
+// Remove Complete -- Block Instruction -- Container Background
+//---------------------------------------------------------------------
+.remove-bg-block-instruction {
+	.block-instruction {
+		background-color: transparent;
+	}
+}
+
+//---------------------------------------------------------------------
+// Remove Complete BLock-level Container Background
+//---------------------------------------------------------------------
+.remove-bg-block-level {
+	.remove-bg-block-title;
+	.remove-bg-block-body-inner;
+	.remove-bg-block-instruction;
+}
+
+//---------------------------------------------------------------------
+// Remove Complete -- Component Container -- Container Background
+//---------------------------------------------------------------------
+.remove-bg-component-container {
+	.component-container {
+		background-color: transparent;
+	}
+}
+
+//---------------------------------------------------------------------
+// Remove Instruction text on mobile sizes -- Useful for the blockslider extension
+//---------------------------------------------------------------------
+.remove-instruction-mobile {
+	@media all and (max-width: (@device-width-small + 20px)) {
+    .component-instruction-inner {
+      display: none;
+    }
+  }
+}
+
+//---------------------------------------------------------------------
+// Expand block body text to full width
+//---------------------------------------------------------------------
+.full-width-block {
+	.block-inner {
+		max-width: 3000px !important;
+	}
+	.block-title {
+		text-align: center;
+    .dir-rtl & {
+      text-align: center;
+    }
+  }
+  .block-body-inner,
+  .block-instruction-inner,
+	.component-container {
+		max-width: @device-width-large;
+		margin: auto;
+	}
+}
+
+//---------------------------------------------------------------------
+// Expand component body text to full width
+//---------------------------------------------------------------------
+.full-width-component {
+	.block-inner {
+		max-width: 3000px !important;
+	}
+	.component-title,
+	.component-body-inner,
+	.component-instruction-inner {
+		max-width: @device-width-large - (@component-padding*2);
+		margin: auto;
+	}
+	.component-widget,
+	.audio-inner {
+		max-width: @device-width-large;
+		margin: auto;
+	}
+}
+
+//---------------------------------------------------------------------
+// Smaller component at 70%
+//---------------------------------------------------------------------
+.medium-width-component {
+	@media all and (min-width:@device-width-medium) {
+		max-width: 70%;
+		margin: auto;
+	}
+}
+
+//---------------------------------------------------------------------
+// Medium width widget at 70%
+//---------------------------------------------------------------------
+.medium-width-widget {
+	@media all and (min-width: @device-width-medium) {
+		.component-widget {
+			width: 70%;
+			margin: auto;
+		}
+  }
+}
+
+//---------------------------------------------------------------------
+// Add default BG color to component
+//---------------------------------------------------------------------
+.add-component-bg {
+  .component-widget {
+		background-color: @text-background-color;
+    .no-opacity & {
+			background-color: @text-background-color-fallback;
+    }
+    margin-top: 0px;
+    padding: 0 @component-padding @component-padding @component-padding;
+  }
+  .buttons {
+    background-color: @text-background-color;
+    .no-opacity & {
+			background-color: @text-background-color-fallback;
+    }
+    margin-top: 0px;
+    padding: @component-padding;
+    padding-top: 0px;
+  }
+}
+
+//---------------------------------------------------------------------
+// Add default BG color to compoent inner for summary pages
+//---------------------------------------------------------------------
+.add-component-inner-bg {
+	.component-body,
+	.component-instruction {
+		background-color: transparent;
+	}
+	.component-inner {
+		background-color: @text-background-color;
+		.no-opacity & {
+			background-color: @text-background-color-fallback;
+    }
+	}
+}
+
+//---------------------------------------------------------------------
+// Remove default title BG color on component
+//---------------------------------------------------------------------
+.remove-component-title-bg {
+	.component-title {
+		background-color: transparent;
+	}
+}
+
+//---------------------------------------------------------------------
+// Remove default BG color on component
+//---------------------------------------------------------------------
+.remove-component-bg {
+	.component-body,
+	.component-instruction {
+		background-color: transparent;
+	}
+}
+
+//---------------------------------------------------------------------
+// Add shadow to top edge
+//---------------------------------------------------------------------
+.add-top-shadow {
+	-moz-box-shadow: 0 10px 10px -8px #999;
+	-webkit-box-shadow: 0 10px 10px -8px #999;
+	box-shadow: inset 0 10px 10px -8px #999;
+}
+
+//---------------------------------------------------------------------
+// Centered image
+//---------------------------------------------------------------------
+.centered-image {
+    .component-widget {
+        img {
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+//---------------------------------------------------------------------
+// // Question-component (left)
+//---------------------------------------------------------------------
+// Apply to component
+// USED WHEN COMPONENT IN LEFT BLOCK AND GRAPHIC IN RIGHT BLOCK
+.half-component-bg {
+	.component-inner {
+		margin-right: 0%;
+	}
+	.add-component-bg;
+}
+
+/************************************************************************************
+USAGE:   (Left) Interactive component / (Right) Graphic
+-----    Add class below to a block and class above to the component
+
+.bg-10-1 {
+	// CUSTOM -- Use in conjunction with 'c-10-1-1' class below
+	.component-container {
+		padding: 0px;
+		background: transparent;
+
+		@media all and (min-width: @device-width-medium) {
+			background-image: url(../../course/en/images/half-width-graphic.jpg);
+			background-position: top right;
+			background-repeat:repeat;
+		}
+	}
+}
+
+.c-10-1 {
+	// CUSTOM -- Use in conjunction with 'b-10-1' class above
+	.half-component-bg;
+}
+************************************************************************************/
+
+
+
+// Divider block - used to separate content or break up pages.
+// =============
+
+// Class applies alternative background color and component styling
+.divider-block {
+    background-color: @background-color-inverted;
+    color: @foreground-color-inverted;
+    text-align: center;
+    .block-title,
+    .block-body,
+    .block-instruction,
+    .component-title,
+    .component-body,
+    .component-instruction {
+    	color: @foreground-color-inverted;
+    	text-align: center;
+    }
+    .component-inner {
+    	background-color: transparent;
+    }
+}
+
+// Block background color - used to apply variable based background colors on blocks
+// ======================
+.block {
+	&.primary-color {
+		background-color: @primary-color;
+	}
+
+	&.secondary-color {
+		background-color: @secondary-color;
+	}
+
+	&.tertiary-color {
+		background-color: @tertiary-color;
+	}
+
+	&.background-color {
+		background-color: @background-color;
+	}
+
+	&.background-color-inverted {
+		background-color: @background-color-inverted;
+		color: @font-color-inverted;
+		.component-inner {
+			background-color: transparent;
+		}
+	}
+}
+
+//---------------------------------------------------------------------
+// Class to center the submit button when feedback button isn't used
+//---------------------------------------------------------------------
+.single-submit-button {
+	.buttons {
+		text-align: center;
+		button {
+			float: none;
+			width: auto;
+		}
+		.buttons-marking-icon {
+		    position: relative;
+		    margin-top: -10px;
+		    margin-bottom: 10px;
+		}
+		.buttons-action {
+			width: auto;
+			&.disabled {
+				display: none;
+			}
+		}
+	}
+}
+
+//---------------------------------------------------------------------
+// Class to remove the feedback button on a question component
+//---------------------------------------------------------------------
+.remove-feedback-button {
+  .buttons-marking-icon {
+    position: relative;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  .buttons-action {
+    width: 100%;
+  }
+  .buttons-feedback {
+    display: none;
+  }
+}
+
+//---------------------------------------------------------------------
+// Classes to add icons within the body text
+//---------------------------------------------------------------------
+.body-resource-icon {
+  .icon;
+  &:before {
+    content: "\e621";
+    color: @button-color;
+  }
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.body-help-icon {
+  .icon;
+  &:before {
+    content: "\e638";
+    color: @button-color;
+  }
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.body-warning-icon {
+  .icon;
+  &:before {
+    content: "\e639";
+    color: @button-color;
+  }
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.body-lightbulb-icon {
+	.icon;
+	&:before {
+		content: "\e629";
+		color: @button-color;
+	}
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.body-question-icon {
+	.icon;
+	&:before {
+		content: "\e638";
+		color: @button-color;
+	}
+	vertical-align: middle;
+	display: inline-block;
+}
+
+//---------------------------------------------------------------------
+// Rounded interface
+//---------------------------------------------------------------------
+button:not(.pagelevelprogress-item-title):not(.grid-item-option):not(.hotgrid-item-image):not(.accordion-item-title):not(.audio-toggle):not(.media-subtitles-button):not(.icon-popup-open-button):not(.trickle):not(.button) {
+  border-radius: @button-radius !important;
+}
+
+.audio-toggle {
+  border-radius: 0 @button-radius 0 0 !important;
+  .dir-rtl & {
+    border-radius: @button-radius 0 0 0 !important;
+  }
+}
+
+.icon-popup-component {
+  .icon-popup-open-button {
+    border-radius: 0 @button-radius 0 0 !important;
+    .dir-rtl & {
+      border-radius: @button-radius 0 0 0 !important;
+    }
+  }
+  &.audio-enabled {
+    .icon-popup-open-button {
+      border-radius: 0 !important;
+    }
+  }
+}
+
+.media-subtitles-button {
+  border-radius: 0 0 0 @button-radius !important;
+  .dir-rtl & {
+    border-radius: 0 0 @button-radius 0 !important;
+  }
+}

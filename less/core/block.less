@@ -1,0 +1,66 @@
+// Block styling
+// =============
+
+.block {
+    //background-color: @background-color;
+
+    .block-inner {
+        max-width: @device-width-large;
+        margin: auto;
+        padding: @block-padding-top 0 @block-padding-bottom;
+        // reduce padding as screen width decreases
+        @media all and (max-width: (@device-width-large + 20px)) {
+            padding: (@block-padding-top / 2) 20px (@block-padding-bottom / 2);
+        }
+        @media all and (max-width: (@device-width-small + 20px)) {
+            padding: (@block-padding-top / 3) 10px (@block-padding-bottom / 3);
+        }
+    }
+
+    .block-title {
+        //margin-bottom: @block-title-margin-bottom;
+        color: @block-title-text-color;
+        text-align: left;
+        background-color: @block-title-background-color;
+        padding: (@title-text-margin / 2) @title-text-margin (@title-text-margin / 2) @title-text-margin;
+
+        .dir-rtl & {
+            text-align: right;
+        }
+
+        margin-left: @title-text-margin;
+        margin-right: @title-text-margin;
+    }
+
+    .block-body{
+        //margin-bottom: @block-body-margin-bottom;
+        background-color: @text-background-color;
+        .no-opacity & {
+            background-color: @text-background-color-fallback;
+        }
+
+        margin-left: @body-text-margin;
+        margin-right: @body-text-margin;
+    }
+
+    .block-body-inner {
+        padding: @body-text-margin;
+    }
+
+    .block-instruction {
+        margin-bottom: @block-instruction-margin-bottom;
+        .instruction-text;
+
+        instr {
+            color: @instruction-color;
+        }
+
+        padding: 0px @body-text-margin @body-text-margin @body-text-margin;
+        background-color: @text-background-color;
+        .no-opacity & {
+            background-color: @text-background-color-fallback;
+        }
+        margin-left: @body-text-margin;
+        margin-right: @body-text-margin;
+    }
+}
