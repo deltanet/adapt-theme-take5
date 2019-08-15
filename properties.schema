@@ -38,7 +38,7 @@
             "title": "Instruction Highlight Colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#F26100",
+            "default": "#6ebec5",
             "help": "Wrap the text within <instr></instr> tags to use this colour within the instruction text fields."
           },
           "icon-size": {
@@ -72,19 +72,19 @@
             "title": "Colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#F26100"
+            "default": "#6ebec5"
           },
           "interactive-color-hover": {
             "title": "Hover Colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#37474f"
+            "default": "#f48660"
           },
           "interactive-color-selected": {
             "title": "Selected Colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#37474f"
+            "default": "#f48660"
           },
           "interactive-color-visited": {
             "title": "Visited Colour",
@@ -126,13 +126,13 @@
             "title": "Text Visited Colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#ccc"
+            "default": "#333333"
           },
           "interactive-text-color-disabled": {
             "title": "Text Disabled Colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#ccc"
+            "default": "#333333"
           },
           "button-border": {
             "title": "Border",
@@ -144,13 +144,13 @@
             "title": "Border Colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#F26100"
+            "default": "#6ebec5"
           },
           "button-border-color-hover": {
             "title": "Border Hover Colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#37474f"
+            "default": "#f48660"
           },
           "button-border-color-disabled": {
             "title": "Border Disabled Colour",
@@ -187,7 +187,7 @@
             "title": "Background Colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#000"
+            "default": "#0a141a"
           },
           "navigation-icon-color": {
             "title": "Icon Colour",
@@ -199,7 +199,7 @@
             "title": "Icon Hover Colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#37474f"
+            "default": "#f48660"
           },
           "navigation-padding": {
             "title": "Icon Padding",
@@ -512,7 +512,7 @@
             "title": "Item Colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#000"
+            "default": "#546e7a"
           },
           "drawer-background-color": {
             "title": "Background Colour",

@@ -1,3 +1,40 @@
+//---------------------------------------------------------------------
+// Banner
+//---------------------------------------------------------------------
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(fonts/Ubuntu.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(fonts/Ubuntu-Bold.woff);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(fonts/Ubuntu-Italic.woff);
+    font-weight: normal;
+    font-style: italic;
+}
+
+.take5-banner {
+	.grid-item-body {
+		font-family: 'Ubuntu' !important;
+
+		&.unicode-font {
+			font-family: 'Arial Unicode MS' !important;
+		}
+	}
+}
+
+//---------------------------------------------------------------------
+// Old results class
+//---------------------------------------------------------------------
 .take5-result-layout {
     .component-container {
         padding-bottom: 0 !important;
@@ -75,35 +112,13 @@
 }
 
 //---------------------------------------------------------------------
-// Banner
+// Class for Matching question on Interactive Video
 //---------------------------------------------------------------------
-@font-face {
-    font-family: 'Ubuntu';
-    src: url(fonts/Ubuntu.woff);
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Ubuntu';
-    src: url(fonts/Ubuntu-Bold.woff);
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Ubuntu';
-    src: url(fonts/Ubuntu-Italic.woff);
-    font-weight: normal;
-    font-style: italic;
-}
-
-.take5-banner {
-	.grid-item-body {
-		font-family: 'Ubuntu' !important;
-
-		&.unicode-font {
-			font-family: 'Arial Unicode MS' !important;
-		}
-	}
+.matching-iv-class {
+  .component-instruction {
+    margin-bottom: -10px !important;
+  }
+  .matching-item {
+    padding-bottom: 0px !important;
+  }
 }
