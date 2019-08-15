@@ -122,3 +122,41 @@
     padding-bottom: 0px !important;
   }
 }
+
+
+//---------------------------------------------------------------------
+// Custom list icons for T3-T6
+//---------------------------------------------------------------------
+
+.list-tick {
+    li {
+      position: relative;
+    }
+    li:before {
+        font-family: 'vanilla';
+        content: '\e633';
+        color: #109f10;
+        margin-left: -15px !important;
+    }
+}
+
+.list-cross {
+    li {
+      position: relative;
+    }
+
+    li:before {
+        font-family: 'vanilla';
+        content: '\e634';
+        color: #d30606;
+        margin-left: -15px !important;
+    }
+}
+
+
+.list-disc {
+	li {
+	    position: relative;
+	    list-style: disc;
+	}
+}
