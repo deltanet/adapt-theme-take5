@@ -41,6 +41,10 @@
 
         .gmcq-answer-icon {
             color: @item-color;
+
+            &.checkbox {
+                border: 3px solid @item-color;
+            }
         }
 
         &.selected {
@@ -54,6 +58,12 @@
             .gmcq-item-inner {
                 color: @item-color-selected;
             }
+
+            .gmcq-answer-icon {
+                &.checkbox {
+                    border: 3px solid @item-color-selected;
+                }
+            }
         }
 
         &.disabled {
@@ -62,6 +72,11 @@
             }
             .gmcq-item-inner {
                 color: @item-color-disabled;
+            }
+            .gmcq-answer-icon {
+                &.checkbox {
+                    border: 3px solid @item-color-disabled;
+                }
             }
         }
     }
@@ -163,6 +178,11 @@
                     }
                     .gmcq-item-inner {
                         color: @item-color-hover;
+                    }
+                    .gmcq-answer-icon {
+                        &.checkbox {
+                            border: 3px solid @item-color-hover;
+                        }
                     }
                 }
             }
