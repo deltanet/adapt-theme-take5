@@ -1,23 +1,23 @@
-# adapt-theme-delta-editable  
+# adapt-theme-take5  
 
-**Delta Editable** is a *theme* bundled with the [Adapt framework](https://github.com/adaptlearning/adapt_framework).  
+**Take5** is a *theme* bundled with the [Adapt framework](https://github.com/adaptlearning/adapt_framework).  
 
 <img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/vanilla01.jpg" alt="sample colors from the vanilla theme">  
 
-It provides specific values to styles, including colors, padding, margins, and assets such as fonts and background images. [Visit the **Delta Editable** wiki](https://github.com/adaptlearning/adapt-contrib-vanilla/wiki) for more information about its functionality and for explanations of key properties.
+It provides specific values to styles, including colors, padding, margins, and assets such as fonts and background images. [Visit the **Take5** wiki](https://github.com/adaptlearning/adapt-contrib-vanilla/wiki) for more information about its functionality and for explanations of key properties.
 
 ## Installation
 
 This theme must be manually installed.
 
-If **Delta Editable** has been uninstalled from the Adapt authoring tool, it may be reinstalled using the [Plug-in Manager](https://github.com/adaptlearning/adapt_authoring/wiki/Plugin-Manager).  
+If **Take5** has been uninstalled from the Adapt authoring tool, it may be reinstalled using the [Plug-in Manager](https://github.com/adaptlearning/adapt_authoring/wiki/Plugin-Manager).  
 
 ## Settings overview
 
-Unlike most Adapt plug-ins, the **Delta Editable** theme has no attributes that are required to be configured in the course JSON files. There is, however, an option to alter the background color of blocks as desired. Configure the attributes highlighted below in *blocks.json*. These attributes are properly formatted as JSON in [*example.json*](https://github.com/adaptlearning/adapt-contrib-vanilla/blob/master/example.json).
+Unlike most Adapt plug-ins, the **Take5** theme has no attributes that are required to be configured in the course JSON files. There is, however, an option to alter the background color of blocks as desired. Configure the attributes highlighted below in *blocks.json*. These attributes are properly formatted as JSON in [*example.json*](https://github.com/adaptlearning/adapt-contrib-vanilla/blob/master/example.json).
 
 #### **blocks.json**
-**_theme** (object): The theme attributes group contains attributes that override those set in **Delta Editable**. These include **_backgroundColor**, **_minimumHeights**, and **_isDividerBlock**.
+**_theme** (object): The theme attributes group contains attributes that override those set in **Take5**. These include **_backgroundColor**, **_minimumHeights**, and **_isDividerBlock**.
 
 >**_backgroundColor** (string): This value is the name of a color variable that has been defined in  *less/colors.less*. Omit the initial `@` that is a part of the variable declaration. For example, an acceptable value is `"background-color-inverted"`.  
 
@@ -31,7 +31,7 @@ Unlike most Adapt plug-ins, the **Delta Editable** theme has no attributes that 
 
 >**_isDividerBlock** (boolean): - Determines whether the CSS class `divider-block` *(less/src/theme-extras.less)* will be applied. Acceptable values are `true` and `false`.
 
-Visit the [**Delta Editable** wiki](https://github.com/adaptlearning/adapt-contrib-vanilla/wiki) for more information about how to use and manipulate the theme.  
+Visit the [**Take5** wiki](https://github.com/adaptlearning/adapt-contrib-vanilla/wiki) for more information about how to use and manipulate the theme.  
 
 ## Structure  
 
@@ -51,7 +51,7 @@ Visit the [**Delta Editable** wiki](https://github.com/adaptlearning/adapt-contr
 
 ## Templates
 
-**Delta Editable** supports customisation for the rendering of various Adapt elements through the use of [Handlebars](http://handlebarsjs.com/) templates.  The file name of the template indicates the element it affects. Among the available templates are:
+**Take5** supports customisation for the rendering of various Adapt elements through the use of [Handlebars](http://handlebarsjs.com/) templates.  The file name of the template indicates the element it affects. Among the available templates are:
 * article.hbs
 * block.hbs
 * loading.hbs
@@ -63,8 +63,8 @@ Visit the [**Delta Editable** wiki](https://github.com/adaptlearning/adapt-contr
 No known limitations.  
 
 ----------------------------
-**Version number:**  1.0.0   
-**Framework versions:**  2.4+     
+**Version number:**  3.0.0   
+**Framework versions:**  4+     
 **Author / maintainer:** Adapt Core Team / DeltaNet    
 **Accessibility support:** WAI AA   
 **RTL support:** yes  
