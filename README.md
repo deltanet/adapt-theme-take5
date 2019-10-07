@@ -63,7 +63,7 @@ Visit the [**Take5** wiki](https://github.com/adaptlearning/adapt-contrib-vanill
 No known limitations.  
 
 ----------------------------
-**Version number:**  3.0.0   
+**Version number:**  3.0.2   
 **Framework versions:**  4+     
 **Author / maintainer:** Adapt Core Team / DeltaNet    
 **Accessibility support:** WAI AA   

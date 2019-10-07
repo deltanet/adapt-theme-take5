@@ -43,6 +43,18 @@
         padding-top: 0 !important;
         padding-bottom: 0 !important;
     }
+    .block {
+        &.nth-child-1 {
+            .block-inner {
+                padding-bottom: 0 !important;
+            }
+        }
+        &.nth-child-2 {
+            .block-inner {
+                padding-top: 0 !important;
+            }
+        }
+    }
 }
 
 .take5-close-comp {
@@ -50,10 +62,6 @@
         padding-top: 0 !important;
         padding-bottom: 0 !important;
     }
-}
-
-.results-custom-margin {
-    margin-top: -5.6% !important;
 }
 
 .grey-component,
