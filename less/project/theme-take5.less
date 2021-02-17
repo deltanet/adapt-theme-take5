@@ -1,0 +1,118 @@
+.take5-result-layout {
+  .component__container {
+    padding-bottom: 0 !important;
+  }
+
+  .component__inner {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .block {
+    &.nth-child-1 {
+      .block__inner {
+        padding-bottom: 0 !important;
+      }
+    }
+
+    &.nth-child-2 {
+      .block__inner {
+        padding-top: 0 !important;
+      }
+    }
+  }
+}
+
+.take5-close-comp {
+  .component__body {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+.grey-component,
+.grey-commponent {
+  .component__body,
+  .component__instruction,
+  .component__widget {
+    background-color: rgba(102,102,102,0.8) !important;
+    color: #fff;
+  }
+}
+
+.full-width-media-block {
+  min-height: 10px;
+
+  .article__inner {
+    padding: 0;
+  }
+
+  .block__inner {
+    max-width: @max-width;
+    margin: 0;
+    padding: 0;
+  }
+
+  .component__inner {
+    padding: 0;
+  }
+
+  .component__container,
+  .media-transcript-container,
+  .trickle__btn {
+    padding-bottom: 30px !important;
+  }
+}
+
+.medium-width-left {
+	@media all and (min-width:@device-width-medium) {
+		max-width: 70%;
+    float: left;
+    .dir-rtl & {
+        float: right;
+    }
+	}
+}
+
+.medium-width-right {
+	@media all and (min-width:@device-width-medium) {
+		max-width: 70%;
+    float: right;
+    .dir-rtl & {
+        float: left;
+    }
+	}
+}
+
+// Banner
+// --------------------------------------------------
+@font-face {
+  font-family: 'Ubuntu';
+  src: url(fonts/Ubuntu.woff);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url(fonts/Ubuntu-Bold.woff);
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url(fonts/Ubuntu-Italic.woff);
+  font-weight: normal;
+  font-style: italic;
+}
+
+.take5-banner {
+	.grid__item-body {
+		font-family: 'Ubuntu' !important;
+
+		&.unicode-font {
+			font-family: 'Arial Unicode MS' !important;
+		}
+	}
+}

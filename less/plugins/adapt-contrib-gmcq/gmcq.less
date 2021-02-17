@@ -1,191 +1,97 @@
-.gmcq-component {
-    .gmcq-item {
-        @media all and (max-width:@device-width-medium) {
-            width:100%;
-            &.even, &.odd {
-                label {
-                    margin-left:0%;
-                    margin-right:0%;
-                }
-            }
-        }
+.gmcq {
+  &__item-label {
+    margin: @item-margin;
+  }
+
+  // Layout #1
+  // --------------------------------------------------
+  /*
+  &__item-option {
+    margin-top: @item-margin;
+    padding: @item-padding / 2;
+    background-color: @item-color;
+    color: @item-color-inverted;
+    border-radius: @item-border-radius;
+  }
+
+  .no-touch &__item-label:not(.is-disabled):not(.is-selected):hover .gmcq__item-option,
+  html:not(.a11y-disable-focusoutline) .gmcq__item-input:focus + &__item-label &__item-option {
+    background-color: @item-color-hover;
+    color: @item-color-inverted-hover;
+    .transition(background-color @duration ease-in, color @duration ease-in;);
+  }
+
+  &__item-label.is-disabled .gmcq__item-option {
+    background-color: @disabled;
+    color: @disabled-inverted;
+  }
+
+  &__item-label.is-selected .gmcq__item-option {
+    background-color: @item-color-selected;
+    color: @item-color-inverted-selected;
+  }
+
+  &__item-state {
+    min-height: @icon-size;
+  }
+
+  &__item-text {
+    margin-top: @item-margin;
+    text-align: center;
+  }
+  */
+
+  // Layout #2
+  // --------------------------------------------------
+  &__item-option {
+    position: relative;
+  }
+
+  &__item-state {
+    position: absolute;
+    top: 50%;
+    left: @item-padding;
+    .transform(translateY(-50%));
+
+    .dir-rtl & {
+      left: inherit;
+      right: @item-padding;
     }
+  }
 
-    &.col-4 {
-        .gmcq-item {
-            width: 25%;
+  &__item-text {
+    padding: @item-padding @item-padding @item-padding (@icon-size + (@item-padding * 2));
 
-            &.item-1, &.item-2 {
-                label {
-                    margin-left: 2.5%;
-                    margin-right: 2.5%;
-                }
-            }
-
-            @media all and (max-width:@device-width-medium) {
-                width:100%;
-                &.even, &.odd {
-                    label {
-                        margin-left:0%;
-                        margin-right:0%;
-                    }
-                }
-            }
-        }
+    .dir-rtl & {
+      padding-left: @item-padding;
+      padding-right: @icon-size + (@item-padding * 2);
     }
+  }
 
-    .gmcq-item label {
-        color: @item-text-color;
-        border: none;
-        background-color: transparent;
+  &__item-label.is-disabled .gmcq__item-option {
+    background-color: @disabled;
+    color: @disabled-inverted;
+  }
 
-        .gmcq-answer-icon {
-            color: @item-color;
-
-            &.checkbox {
-                border: 3px solid @item-color;
-            }
-        }
-
-        &.selected {
-            color: @item-color-selected;
-            background-color: transparent;
-
-            .gmcq-item-icon {
-                color: @item-color-selected;
-            }
-
-            .gmcq-item-inner {
-                color: @item-color-selected;
-            }
-
-            .gmcq-answer-icon {
-                &.checkbox {
-                    border: 3px solid @item-color-selected;
-                }
-            }
-        }
-
-        &.disabled {
-            .gmcq-item-icon {
-                color: @item-text-color;
-            }
-            .gmcq-item-inner {
-                color: @item-color-disabled;
-            }
-            .gmcq-answer-icon {
-                &.checkbox {
-                    border: 3px solid @item-color-disabled;
-                }
-            }
-        }
+  &__item.is-correct {
+    .gmcq__item-label.is-selected .gmcq__item-option {
+      background-color: @validation-success;
+      color: @validation-success-inverted;
     }
+  }
 
-    .gmcq-item-inner {
-        margin-left: @icon-size * 2;
-        color: @item-color;
-        padding-bottom: @item-padding-bottom;
-        padding-top: @item-padding-top;
-        padding-left: 0;
-        padding-right: 0;
-        .dir-rtl & {
-            margin-left: inherit;
-            margin-right: @icon-size * 2;
-        }
+  &__item.is-incorrect {
+    .gmcq__item-label.is-selected .gmcq__item-option {
+      background-color: @validation-error;
+      color: @validation-error-inverted;
     }
+  }
 
-    .gmcq-item input {
-        opacity: 0;
+  &__widget.show-correct-answer {
+    .gmcq__item-label.is-selected .gmcq__item-option {
+      background-color: @validation-success;
+      color: @validation-success-inverted;
     }
+  }
 
-    .gmcq-correct-icon {
-        color: @item-text-color;
-    }
-
-    .gmcq-incorrect-icon {
-        color: @validation-error;
-    }
-
-    .gmcq-widget {
-        &.show-user-answer {
-            label.selected {
-                .gmcq-item-inner {
-                    color: @item-color-selected;
-                }
-            }
-        }
-
-        &.show-correct-answer {
-            label.selected {
-                .gmcq-item-inner {
-                    color: @item-color-selected;
-                }
-                .gmcq-item-checkbox {
-                    background-color: @validation-success !important;
-                }
-            }
-        }
-
-        &.disabled {
-            .gmcq-item-inner {
-                color: @item-text-color !important;
-            }
-
-            .gmcq-item label.selected.disabled {
-                background-color: transparent;
-            }
-
-            .gmcq-item label.disabled {
-                color: @item-color-disabled;
-                background-color: transparent;
-                border-color: @item-border-color-disabled;
-                border: none;
-
-                .gmcq-item-checkbox {
-                    background-color: @item-color-disabled;
-                }
-            }
-
-            .gmcq-item {
-                &.correct {
-                    label.selected {
-                        .gmcq-item-checkbox {
-                            background-color: @validation-success;
-                        }
-                    }
-                  }
-                  &.incorrect {
-                    label.selected {
-                        .gmcq-item-checkbox {
-                            background-color: @validation-error;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-.no-touch {
-    .gmcq-component {
-        .gmcq-widget {
-            &:not(.disabled) {
-                .gmcq-item label:hover {
-                    color: @item-color-hover;
-                    background-color: transparent;
-                    .gmcq-item-icon {
-                        color: @item-color-hover;
-                    }
-                    .gmcq-item-inner {
-                        color: @item-color-hover;
-                    }
-                    .gmcq-answer-icon {
-                        &.checkbox {
-                            border: 3px solid @item-color-hover;
-                        }
-                    }
-                }
-            }
-        }
-    }
 }

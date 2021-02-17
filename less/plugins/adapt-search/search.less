@@ -1,13 +1,12 @@
-.search-drawer {
-    &.drawer-item-open,
-    .drawer-item-open,
-    .drawer-item-search {
-        background-color: @drawer-inactive-color !important;
-        color: @bespoke-drawer-text-color !important;
-        border-bottom: 1px solid @drawer-inactive-color !important;
+.drawer__item-open{
+	&.is-search {
+		display: block;
+	  padding: @item-padding;
+	  background-color: @drawer-item-selected;
+	  color: @drawer-item-inverted-selected;
 
-        .no-touch &:hover {
-            background-color: @drawer-inactive-color !important;
-        }
-    }
+		.search {
+	    margin-top: @btn-padding / 2;
+	  }
+	}
 }

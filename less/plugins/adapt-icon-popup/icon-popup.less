@@ -1,0 +1,13 @@
+.iconpopup-component {
+  .iconpopup__btn {
+    border-radius: 0 @btn-border-radius 0 0;
+    .dir-rtl & {
+      border-radius: @btn-border-radius 0 0 0;
+    }
+  }
+  &.audio-enabled {
+    .iconpopup__btn {
+      border-radius: 0;
+    }
+  }
+}

@@ -1,0 +1,103 @@
+.deltaboxmenu-item {
+
+  float: left;
+  .dir-rtl & {
+    float: right;
+  }
+
+  &.nth-child-odd {
+    clear: none;
+  }
+
+  &__inner {
+    background-color: @menu-item;
+    color: @menu-item-inverted;
+    border: none;
+    padding: 0;
+
+    &:not(.is-locked) {
+      .deltaboxmenu-item__image-container {
+        &:hover {
+    			img {
+    				opacity: 0.5;
+    			}
+    		}
+      }
+    }
+  }
+
+  &__image-container {
+    margin-bottom: 0;
+    background-color: @btn-color-hover;
+  }
+
+  &__title {
+    margin-bottom: @menu-item-title-margin;
+    .menu-item-title;
+  }
+
+  &__body {
+    margin-bottom: @menu-item-body-margin;
+    .menu-item-body;
+  }
+
+  &__body a {
+    .link-text;
+  }
+
+  &__progress {
+    text-align: center;
+    margin-bottom: @menu-item-progress-margin;
+  }
+
+  &__details-inner {
+    padding: @item-padding;
+  }
+
+  &__button-container {
+    text-align: center;
+  }
+
+  &__duration {
+    margin-top: @menu-item-duration-margin;
+    .menu-item-body;
+    text-align: center;
+  }
+
+  .pagelevelprogress {
+    &__indicator {
+      display: inline-block;
+      width: 6rem;
+    }
+
+    &__indicator-inner {
+      height: @icon-size / 2.5;
+    }
+  }
+
+  &__button {
+    background-color: @menu-item-btn-color;
+    color: @menu-item-btn-color-inverted;
+
+    .no-touch &:not(.is-disabled):not(.is-locked):hover {
+      background-color: @menu-item-btn-color-hover;
+      color: @menu-item-btn-color-inverted-hover;
+      .transition(background-color @duration ease-in, color @duration ease-in;);
+    }
+  }
+
+  &__button.is-locked,
+  &__button.is-disabled {
+    background-color: @disabled;
+    color: @disabled-inverted;
+  }
+
+  &__button.is-visited {
+    background-color: @visited;
+    color: @visited-inverted;
+  }
+
+  &.has-img-zoom &__image-container {
+    .img-zoom();
+  }
+}

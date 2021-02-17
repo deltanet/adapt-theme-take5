@@ -1,20 +1,16 @@
-// THEME EXAMPLE JSON - The below config is optional to apply additional theme styles.
-// ==================
+On screen animation classes
 
-// All conifigurable LESS is set in theme-extras.less
+    "_onScreen": {
+        "_isEnabled": true,
+        "_comment": "Supported classes = 'fade-in' | 'fade-in-left' | 'fade-in-right' | 'fade-in-top' | 'fade-in-bottom'. Additional classes can be used but they must be predefined in one of the Less files",
+        "_classes": "fade-in-bottom",
+        "_percentInviewVertical": 50
+    }
 
-// Block Config
-// ============
+Block classes
 
-"_theme": {
-    // Background Color - set background color based on color variables defined in colors.less
-    "_backgroundColor": "background-color-inverted",
-    // Minimum Heights - set minimum heights on blocks at different device widths
-    "_minimumHeights": {
-        "_large": 500,
-        "_medium": 500,
-        "_small": 300
-    },
-    // Divider Block - break up page content by overriding block content style
-    "_isDividerBlock": true
-}
+    "_comment": "Aligns child components centrally on the vertical axis",
+    "_classes": "align-vert-center"
+
+    "_comment": "Background color mixin. 'block-color' class is set up to be a common class that can be used for style generic overrides. The second class must match a predefined variable in the theme or added in Project Settings > Custom CSS/Less code.",
+    "_classes": "block-color black"

@@ -1,87 +1,31 @@
-// Component styling
-// =================
-
 .component {
-    .component-inner {
-        padding: @component-padding;
-        //.component-background;
-        &.blank-inner { // don't apply styling to blank component
-            background-color: transparent;
-            padding: 0;
-        }
-    }
+  &__title {
+    margin-bottom: @component-title-margin;
+    .component-title;
+    color: @heading-color;
+  }
 
-    .component-title {
-        //margin-bottom: @component-title-margin-bottom;
-        color: @component-title-text-color;
-        background-color: @component-title-background-color;
-        padding: 0 @component-padding 0 @component-padding;
+  &__body {
+    margin-bottom: @component-body-margin;
+  }
 
-        padding: (@item-padding / 2) @item-padding (@item-padding / 2) @item-padding;
-        min-height: @icon-size + @item-padding;
+  &__instruction {
+    margin-bottom: @component-instruction-margin;
+    .instruction-text;
+  }
 
-        text-align: left;
-        .dir-rtl & {
-            text-align: right;
-        }
-    }
+  &__body a,
+  &__instruction a {
+    .link-text;
+  }
+}
 
-    .component-title-inner {
-        // Add padding to top to because of the min-height on the .component-title
-        padding-top: 2px;
-    }
+.component.is-left + .component.is-right {
+  // Converted media query to use min width to sync responsive trigger with js
+  // https://github.com/adaptlearning/adapt_framework/issues/2865
+  padding-top: @block-padding-ver;
 
-    .component-body {
-        //margin: @component-body-margin-top 0px @component-body-margin-bottom;
-        padding: @body-text-margin;
-        background-color: @text-background-color;
-        .no-opacity & {
-            background-color: @text-background-color-fallback;
-        }
-
-        a {
-            text-decoration: underline;
-            color: @font-color;
-        }
-    }
-
-    .component-body-inner {
-        padding: 0px;
-
-        instr {
-            color: @instruction-color;
-        }
-    }
-
-    .component-instruction {
-        //margin-bottom: @component-instruction-margin-bottom;
-        background-color: @text-background-color;
-        .no-opacity & {
-            background-color: @text-background-color-fallback;
-        }
-        padding: 0px @body-text-margin @body-text-margin @body-text-margin;
-        .instruction-text;
-    }
-
-    .component-instruction-inner {
-        &.validation-error {
-            color: @validation-error;
-        }
-
-        instr {
-            color: @instruction-color;
-        }
-    }
-
-    // to replicate padding between blocks when components drop into a single column
-    @media all and (max-width: (@device-width-small)) {
-
-        &.component-left {
-            padding: 0 0 (@block-padding / 3);
-        }
-
-        &.component-right {
-            padding: (@block-padding / 3) 0 0;
-        }
-    }
+  @media (min-width: @device-width-medium) {
+    padding-top: 0;
+  }
 }

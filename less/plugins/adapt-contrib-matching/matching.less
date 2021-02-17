@@ -1,74 +1,35 @@
-.matching-component {
+.matching {
+  &__item {
+    margin-bottom: @item-margin / 2;
+  }
 
-	.matching-select-state {
-		.matching-correct-icon {
-			color: @item-text-color;
-		}
+  &__item-title {
+    padding: @item-padding;
+  }
 
-		.matching-incorrect-icon {
-			color: @item-text-color;
-		}
-	}
+  &__select-container {
+    position: relative;
+  }
 
-	.select2-container {
-		.select2-selection--single {
-			padding: @item-padding-top 0 @item-padding-bottom 0;
-			background-color: @item-color;
-			color: @item-text-color;
+  &__select-state {
+    position: absolute;
+    top: 50%;
+    right: @item-padding;
+    .transform(translateY(-50%));
 
+    .dir-rtl & {
+      right: inherit;
+      left: @item-padding;
+    }
+  }
 
-			&:hover {
-				.no-touch & {
-					background-color: @item-color-hover;
-					color: @item-text-color-hover;
-				}
-			}
+  &__widget.is-disabled &__select-icon {
+    color: @disabled-inverted;
+  }
 
-			.select2-selection__rendered {
-				color: @item-text-color;
-			}
-
-			.select2-selection__arrow {
-				b {
-					border-color: @item-text-color transparent transparent transparent;
-				}
-			}
-		}
-
-		&.select2-container--open.select2-container--default {
-			.select2-selection--single .select2-selection__arrow b {
-				border-color: transparent transparent @item-text-color transparent;
-			}
-		}
-	}
-}
-
-.no-touch {
-	.matching-select-icon {
-		&:hover {
-			color: @item-text-color-hover;
-		}
-	}
-}
-
-.select2-container--default,
-.dir-rtl .select2-container--default {
-	span.select2-dropdown {
-		background-color: @item-color;
-		color: @item-text-color;
-	}
-
-	li.select2-results__option--highlighted[aria-selected],
-	li.select2-results__option[aria-selected=true] {
-		background-color: @item-color-hover;
-		color: @item-text-color-hover;
-	}
-
-	&.select2-container--disabled {
-		span.select2-selection--single,
-		.no-touch & span.select2-selection--single:hover {
-			background-color: @item-color-disabled;
-			color: @item-text-color-disabled;
-		}
-	}
+  // Error highlight
+  // --------------------------------------------------
+  &__widget:not(.is-complete) &__select-container.has-error .dropdown__btn {
+    box-shadow: 0 0 0 1px @validation-error inset;
+  }
 }
