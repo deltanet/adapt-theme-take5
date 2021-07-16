@@ -1,0 +1,31 @@
+.question-clive {
+	.component__body {
+		background-image: url(assets/question-clive.png);
+		background-repeat:no-repeat;
+
+		background-position: top left;
+		padding-left: 80px;
+		padding-top: @item-padding*2;
+
+		.dir-rtl & {
+			background-position: top right;
+			padding-left: @item-padding;
+			padding-right: 80px;
+    }
+	}
+	.component__instruction {
+		padding-left: 80px;
+		.dir-rtl & {
+			padding-left: @item-padding;
+			padding-right: 80px;
+    }
+	}
+}
+
+.pas-close-button {
+	margin-top: 0px !important;
+}
+
+.narrativeAudio-content__inner {
+	padding-top: 0px !important;
+}

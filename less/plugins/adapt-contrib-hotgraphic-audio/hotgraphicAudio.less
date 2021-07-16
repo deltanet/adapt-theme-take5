@@ -1,58 +1,28 @@
-.hotgraphicAudio-component {
+.hotgraphicaudio {
+  &__pin:not(.has-pin-image) {
+    background-color: @item-color;
+    color: @item-color-inverted;
+    border-radius: 50%;
 
-	.hotgraphicAudio-graphic-pin {
-		.hotgraphicAudio-graphic-pin-icon {
-			background-color: @item-color;
-			border: 2px solid @item-text-color;
-			color: @item-text-color;
-			padding: @item-padding;
-			font-size: (@icon-size*1.5);
-			width: auto;
-			height: auto;
-		}
-		&.visited {
-			.hotgraphicAudio-graphic-pin-icon {
-				background-color: @item-color-visited;
-				border: 2px solid @item-text-color;
-				color: @item-text-color;
-			}
-			.icon:before {
-				font-family: 'vanilla' !important;
-				content: "\e633" !important;
-			}
-		}
-		.no-touch &:hover {
-			.hotgraphicAudio-graphic-pin-icon {
-				color: @item-text-color;
-				background-color: @item-color-hover;
-				border: 2px solid @item-text-color;
-			}
-		}
-
-		.hotgraphicAudio-graphic-pin-text {
-			background-color: @item-color;
-			border: 2px solid @item-text-color;
-			color: @item-text-color;
-		}
-		&.visited {
-			.hotgraphicAudio-graphic-pin-text {
-				background-color: @item-color-visited;
-				border: 2px solid @item-text-color;
-				color: @item-text-color;
-			}
-		}
-		.no-touch &:hover {
-			.hotgraphicAudio-graphic-pin-text {
-				color: @item-text-color;
-				background-color: @item-color-hover;
-				border: 2px solid @item-text-color;
-			}
-		}
-	}
-
-  .hotgraphicAudio-popup-close,
-  .hotgraphicAudio-popup-arrow {
-		border-radius: @button-radius;
+    .no-touch &:hover {
+      background-color: @item-color-hover;
+      color: @item-color-inverted-hover;
+      .transition(background-color @duration ease-in, color @duration ease-in;);
+    }
   }
 
+  &__pin:not(.has-pin-image).is-visited {
+    background-color: @visited;
+    color: @visited-inverted;
+  }
+
+  // Numbered pins
+  // --------------------------------------------------
+  &__pin-number {
+    height: @body-size;
+    width: @body-size;
+    line-height: @body-size;
+    text-align: center;
+    font-weight: @font-weight-bold;
+  }
 }

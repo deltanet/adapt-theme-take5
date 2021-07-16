@@ -1,45 +1,46 @@
-// Page styling
-// ============
-
 .page {
-    background-color: @background-color;
+  max-width: inherit;
+  .l-container-padding(@page-padding-ver, @page-padding-hoz);
 
-    .page-header {
-        background-color: @page-title-background-color;
-    }
+  &.has-bg-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+  }
 
-    .page-header-inner {
-        padding: @page-padding-top 0 @page-padding-bottom;
+  &__header.has-bg-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+  }
 
-        @media all and (max-width: (@device-width-large + 20px)) {
-            padding: @page-padding-top 20px @page-padding-bottom;
-        }
+  &__header-inner {
+    .l-container-padding(@page-header-padding-ver, @page-header-padding-hoz);
+  }
 
-        @media all and (max-width: (@device-width-small + 20px)) {
-            padding: @page-padding-top 10px @page-padding-bottom;
-        }
-    }
+  &__title {
+    margin-bottom: @page-title-margin;
+    .page-title;
+    color: @heading-color;
+  }
 
-    .page-header-content {
-        max-width: @device-width-large;
-        margin: auto;
-        color: @page-title-text-color;
-    }
+  &__subtitle {
+    margin-bottom: @page-subtitle-margin;
+    .page-subtitle;
+  }
 
-    .page-header-content-inner {
-        text-align: center;
-    }
+  &__body {
+    margin-bottom: @page-body-margin;
+    .page-body;
+  }
 
-    .page-title {
-        //margin-bottom: @page-title-margin-bottom;
-    }
+  &__instruction {
+    margin-bottom: @page-instruction-margin;
+    .page-instruction;
+  }
 
-    .page-body {
-        margin-bottom: @page-body-margin-bottom;
-    }
-
-    .page-instruction {
-        margin-bottom: @page-instruction-margin-bottom;
-        .instruction-text;
-    }
+  &__body a,
+  &__instruction a {
+    .link-text;
+  }
 }

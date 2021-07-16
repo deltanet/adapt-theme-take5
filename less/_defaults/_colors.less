@@ -1,0 +1,223 @@
+// DeltaNet variables
+// --------------------------------------------------
+// Page
+@page-title-text-color: #fff;
+@page-title-background-color: #546e7a;
+@page-background-color: #343434;
+//Menu
+@menu-background-color: #343434;
+// Navigation bar
+@navigation-bg-color: #0a141a;
+@navigation-text-color: #fff;
+@navigation-icon-color: #fff;
+@navigation-icon-color-hover: #fff;
+// Articles
+@article-title-text-color: #fff;
+@article-title-background-color: #546e7a;
+// Blocks
+@block-title-text-color: #fff;
+@block-title-background-color: #546e7a;
+// Components
+@component-title-text-color: #fff;
+@component-title-background-color: #546e7a;
+// Text
+@text-color: #000;
+@text-background-color: #fff;
+@instruction-color: #6ebec5;
+// Button BG's
+@interactive-color: #6ebec5;
+@interactive-color-hover: #f48660;
+@interactive-color-selected: #f48660;
+@interactive-color-visited: #727272;
+@interactive-color-disabled: #727272;
+// Button text colours
+@interactive-text-color: #fff;
+@interactive-text-color-hover: #fff;
+@interactive-text-color-selected: #fff;
+@interactive-text-color-visited: #333333;
+@interactive-text-color-disabled: #333333;
+// Notify
+@bespoke-notify-text-color: #000;
+@bespoke-notify-text-background-color: #fff;
+@overlay-background-color: rgba(0,0,0,0.8);
+// Drawer
+@drawer-background-color: #FFF;
+@drawer-inactive-color: #000;
+@bespoke-drawer-text-color: #FFF;
+// Validation colors
+@red: #d30606;
+@green: #109f10;
+// --------------------------------------------------
+// End of DeltaNet variables
+// --------------------------------------------------
+
+
+// Colour definitions
+// --------------------------------------------------
+@white: #fff;
+@blue: #36CDE8;
+@blueDark: #263944;
+@grey: #9096A0;
+@greyDark: #4D4D4D;
+
+// These variables are used to change the colour of text
+// Primary use is for altering the text colour over a background image
+// See ../project/theme-extras.less for block mixin
+// --------------------------------------------------
+@transparent-light: transparent;
+@transparent-dark: transparent;
+
+// Body, link, and heading colour
+// --------------------------------------------------
+@font-color: @text-color;
+@font-color-inverted: @text-background-color;
+
+@link: @font-color;
+@link-inverted: @font-color-inverted;
+
+@link-hover: @link;
+@link-inverted-hover: @link-inverted;
+
+@heading-color: @blue;
+@heading-color-inverted: @white;
+
+// Items - components
+// --------------------------------------------------
+@item-color: @interactive-color;
+@item-color-inverted: @interactive-text-color;
+
+@item-color-hover: @interactive-color-hover;
+@item-color-inverted-hover: @interactive-text-color-hover;
+
+@item-color-selected: @interactive-color-selected;
+@item-color-inverted-selected: @interactive-text-color-selected;
+
+// Visited - presentation components
+// --------------------------------------------------
+@visited: @interactive-color-visited;
+@visited-inverted: @interactive-text-color-visited;
+
+// Buttons
+// --------------------------------------------------
+@btn-color: @interactive-color;
+@btn-color-inverted: @interactive-text-color;
+
+@btn-color-hover: @interactive-color-hover;
+@btn-color-inverted-hover: @interactive-text-color-hover;
+
+// Disabled - question components
+// --------------------------------------------------
+@disabled: @interactive-color-disabled;
+@disabled-inverted: @interactive-text-color-disabled;
+
+// Validation states - question marking
+// --------------------------------------------------
+@validation-success: @green;
+@validation-success-inverted: @white;
+
+@validation-error: @red;
+@validation-error-inverted: @white;
+
+// Progress
+// --------------------------------------------------
+@progress: @validation-success;
+@progress-inverted: @validation-error;
+@progress-border: @white;
+
+// Menu
+// --------------------------------------------------
+@menu-item: @font-color-inverted;
+@menu-item-inverted: @font-color;
+@menu-item-border-color: @item-color;
+
+@menu-item-progress: @progress;
+@menu-item-progress-inverted: @progress-inverted;
+@menu-item-progress-border: @progress-border;
+
+@menu-item-btn-color: @interactive-color;
+@menu-item-btn-color-inverted: @interactive-text-color;
+
+@menu-item-btn-color-hover: @interactive-color-hover;
+@menu-item-btn-color-inverted-hover: @interactive-text-color-hover;
+
+// Navigation
+// --------------------------------------------------
+@nav: @navigation-bg-color;
+@nav-inverted: @navigation-text-color;
+
+@nav-icon: @nav;
+@nav-icon-inverted: @navigation-icon-color;
+
+@nav-icon-hover: @btn-color-hover;
+@nav-icon-inverted-hover: @navigation-icon-color-hover;
+
+@nav-progress: @validation-success;
+@nav-progress-inverted: @validation-error;
+@nav-progress-border: @nav-icon-inverted;
+
+@nav-progress-hover: @nav-icon-inverted-hover;
+@nav-progress-inverted-hover: @nav-progress-inverted;
+@nav-progress-border-hover: @nav-progress-border;
+
+// Notify
+// --------------------------------------------------
+@notify: @bespoke-notify-text-background-color;
+@notify-inverted: @bespoke-notify-text-color;
+
+@notify-link: @bespoke-notify-text-color;
+
+@notify-link-hover: @bespoke-notify-text-color;
+
+@notify-btn: @interactive-color;
+@notify-btn-inverted: @interactive-text-color;
+
+@notify-btn-hover: @interactive-color-hover;
+@notify-btn-inverted-hover: @interactive-text-color-hover;
+
+@notify-icon: @interactive-color;
+@notify-icon-inverted: @interactive-text-color;
+
+@notify-icon-hover: @interactive-color-hover;
+@notify-icon-inverted-hover: @interactive-text-color-hover;
+
+// Drawer
+// --------------------------------------------------
+@drawer: @drawer-background-color;
+@drawer-inverted: @interactive-color;
+
+@drawer-link: @interactive-color;
+
+@drawer-link-hover: @interactive-color-hover;
+
+@drawer-icon: @drawer-background-color;
+@drawer-icon-inverted: @interactive-color;
+
+@drawer-icon-hover: @drawer-background-color;
+@drawer-icon-inverted-hover: @interactive-color-hover;
+
+@drawer-item: @interactive-color;
+@drawer-item-inverted: @interactive-text-color;
+
+@drawer-item-hover: @interactive-color-hover;
+@drawer-item-inverted-hover: @interactive-text-color-hover;
+
+@drawer-item-selected: @interactive-color-selected;
+@drawer-item-inverted-selected: @interactive-text-color-selected;
+
+@drawer-progress: @validation-success;
+@drawer-progress-inverted: @validation-error;
+@drawer-progress-border: @drawer-item-inverted;
+
+@drawer-progress-hover: @drawer-item-inverted-hover;
+@drawer-progress-inverted-hover: @drawer-item-hover;
+@drawer-progress-border-hover: @drawer-progress-border;
+
+// Background
+// --------------------------------------------------
+@background: @font-color-inverted;
+@background-inverted: @font-color;
+
+// Shadow
+// --------------------------------------------------
+@shadow: @overlay-background-color;
+@shadow-inverted: @white;

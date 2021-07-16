@@ -158,12 +158,6 @@
             "inputType": "ColourPicker",
             "default": "#727272"
           },
-          "button-padding": {
-            "title": "Padding",
-            "type": "string",
-            "inputType": "Text",
-            "default": "15px"
-          },
           "button-radius": {
             "title": "Corner Radius",
             "type": "string",
@@ -200,18 +194,6 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "#f48660"
-          },
-          "navigation-padding": {
-            "title": "Icon Padding",
-            "type": "string",
-            "inputType": "Text",
-            "default": "12px"
-          },
-          "navigation-shadow": {
-            "title": "Shadow",
-            "type": "string",
-            "inputType": "Text",
-            "default": "0px 2px 5px 0px rgba(0,0,0,0.26)"
           }
         }
       },
@@ -261,12 +243,6 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "#343434"
-          },
-          "page-shadow": {
-            "title": "Shadow",
-            "type": "string",
-            "inputType": "Text",
-            "default": "0px 0px 10px 0px rgba(0,0,0,0.5)"
           }
         }
       },
@@ -335,12 +311,6 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "#546e7a"
-          },
-          "article-padding": {
-            "title": "Padding",
-            "type": "string",
-            "inputType": "Text",
-            "default": "0px"
           }
         }
       },
@@ -378,12 +348,6 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "#546e7a"
-          },
-          "block-padding": {
-            "title": "Padding",
-            "type": "string",
-            "inputType": "Text",
-            "default": "0px"
           }
         }
       },
@@ -433,18 +397,6 @@
             "type": "string",
             "inputType": "Text",
             "default": "10px"
-          },
-          "sub-title-font-size": {
-            "title": "Sub Title Size",
-            "type": "string",
-            "inputType": "Text",
-            "default": "14px"
-          },
-          "component-padding": {
-            "title": "Padding",
-            "type": "string",
-            "inputType": "Text",
-            "default": "0px"
           }
         }
       },
@@ -488,12 +440,6 @@
             "type": "string",
             "inputType": "ColourPicker",
             "default": "rgba(0,0,0,0.8)"
-          },
-          "notify-padding": {
-            "title": "Padding",
-            "type": "string",
-            "inputType": "Text",
-            "default": "30px"
           }
         }
       },

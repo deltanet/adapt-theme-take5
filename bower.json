@@ -1,18 +1,18 @@
 {
   "name": "adapt-theme-take5",
-  "version": "3.0.4",
-  "framework": ">=4",
+  "version": "4.0.0",
+  "framework": ">=5.2",
   "homepage": "https://github.com/deltanet/adapt-theme-take5",
   "issues": "https://github.com/deltanet/adapt-theme-take5/issues",
   "displayName": "DeltaNet's Take5 Standard Theme",
   "theme": "adapt-theme-take5",
   "description": "A theme for DeltaNet's Take5 courses.",
-  "main": "js/adapt-theme-take5.js",
+  "main": "js/theme.js",
   "keywords": [
     "adapt-plugin",
     "adapt-theme"
   ],
-  "license": "GPLv3",
+  "license": "GPL-3.0",
   "ignore": [
     "**/.*",
     "node_modules",

@@ -1,5 +1,61 @@
-.scenario-audio-component {
-	.scenario-audio-content-instruction {
-		margin-top: @component-body-margin-bottom;
-	}
+.scenario-audio {
+  &__progress {
+    background-color: @item-color;
+    border-radius: 50%;
+
+    .no-touch &:not(.is-selected):hover {
+      background-color: @item-color-hover;
+      .transition(background-color @duration ease-in);
+    }
+  }
+
+  &__progress.is-visited {
+    background-color: @visited;
+  }
+
+  &__progress.is-selected {
+    background-color: @item-color-selected;
+  }
+
+  &__strapline-btn {
+    text-align: left;
+    background-color: @item-color;
+    color: @item-color-inverted;
+
+    .no-touch &:hover {
+      background-color: @item-color-hover;
+      color: @item-color-inverted-hover;
+    }
+
+    .dir-rtl & {
+      text-align: right;
+    }
+  }
+
+  &__strapline-btn.is-visited {
+    background-color: @visited;
+    color: @visited-inverted;
+  }
+
+  &__content {
+    color: @component-title-text-color;
+    background-color: @component-title-background-color;
+  }
+
+  &__control-left {
+    border-radius: 0 @btn-border-radius @btn-border-radius 0;
+
+    .dir-rtl & {
+      border-radius: @btn-border-radius 0 0 @btn-border-radius;
+    }
+  }
+
+  &__control-right {
+    border-radius: @btn-border-radius 0 0 @btn-border-radius;
+
+    .dir-rtl & {
+      border-radius: 0 @btn-border-radius @btn-border-radius 0;
+    }
+  }
+
 }

@@ -1,0 +1,239 @@
+// Body and font
+// --------------------------------------------------
+body {
+	background-color: @page-background-color;
+
+	p {
+    margin-top: 0;
+  }
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	a {
+		font-weight: @font-weight-bold;
+		color: @instruction-color;
+  }
+
+	&.unicode-font {
+    font-family: 'Arial Unicode MS' !important;
+
+		.button, button {
+			&:not(.icon):not(.audio__controls) {
+		    font-family: 'Arial Unicode MS' !important;
+			}
+		}
+  }
+}
+
+// Wrapper
+// --------------------------------------------------
+#wrapper {
+  background-color: @page-background-color;
+}
+
+// Shadow
+// --------------------------------------------------
+.shadow {
+  background-color: @shadow;
+}
+
+// Drawer
+// --------------------------------------------------
+.drawer {
+  &__toolbar,
+	&__item-btn {
+    border-bottom: 1px solid @drawer;
+  }
+}
+
+// Notify
+// --------------------------------------------------
+.notify {
+	&__popup {
+		@media all and (min-width: @device-width-medium) {
+      max-width: @device-width-medium;
+      left: 50%;
+      margin-left: -(@device-width-medium / 2);
+      border-radius: 8px;
+    }
+  }
+
+	&__title {
+		padding: 0;
+		text-align: center;
+	}
+
+	&__btn-container {
+		text-align: center;
+	}
+
+	.notify-push__close-btn {
+		margin: 0;
+		background-color: transparent;
+		color: @btn-color;
+
+		.no-touch &:hover {
+			background-color: transparent;
+			color: @btn-color-hover;
+			.transition(color @duration ease-in, color @duration ease-in;);
+		}
+	}
+}
+
+// Buttons
+// --------------------------------------------------
+.btn-text {
+	padding: @btn-padding (@btn-padding * 2);
+}
+
+// Menu
+// --------------------------------------------------
+.menu {
+  &__title {
+    color: @page-title-text-color;
+    text-align: center;
+  }
+
+	&__subtitle {
+		color: @page-title-text-color;
+		text-align: center;
+	}
+
+	&__body {
+		color: @page-title-text-color;
+		text-align: center;
+	}
+
+	&__instruction {
+		margin-top: 1rem;
+		color: @page-title-text-color;
+		text-align: center;
+	}
+}
+
+// Page
+// --------------------------------------------------
+.page {
+  .l-container-responsive(@max-width);
+
+  &__header {
+    background-color: @page-title-background-color;
+  }
+
+  &__title {
+    color: @page-title-text-color;
+    text-align: center;
+  }
+
+  &__body {
+    color: @page-title-text-color;
+    text-align: center;
+  }
+
+  &__instruction {
+    color: @page-title-text-color;
+    text-align: center;
+  }
+}
+
+// Article
+// --------------------------------------------------
+.article {
+  background-color: @background;
+
+	@media all and (min-width: (@device-width-small + 20px)) {
+		min-height: @content-height;
+	}
+
+  &__header-inner {
+    max-width: none;
+    padding: 0;
+  }
+
+  &__title {
+    color: @article-title-text-color;
+    background-color: @article-title-background-color;
+    text-align: center;
+    padding: (@article-title-margin / 2) @article-title-margin (@article-title-margin / 2) @article-title-margin;
+  }
+
+  &__body {
+    padding: @component-body-margin;
+    background-color: @text-background-color;
+    margin-bottom: 0;
+    .l-container-responsive(@device-width-large);
+  }
+
+  &__instruction {
+    padding: 0px @component-body-margin @component-body-margin @component-body-margin;
+    background-color: @text-background-color;
+    .l-container-responsive(@device-width-large);
+  }
+}
+
+// Block
+// --------------------------------------------------
+.block {
+  &__title {
+    color: @block-title-text-color;
+    background-color: @block-title-background-color;
+    padding: (@block-title-margin / 2) @block-title-margin (@block-title-margin / 2) @block-title-margin;
+    margin-bottom: 0;
+  }
+
+  &__body {
+    padding: @component-body-margin;
+    background-color: @text-background-color;
+    margin-bottom: 0;
+  }
+
+  &__instruction {
+    padding: 0px @component-body-margin @component-body-margin @component-body-margin;
+    background-color: @text-background-color;
+  }
+}
+
+// Component
+// --------------------------------------------------
+.component {
+  &__title {
+    color: @component-title-text-color;
+    background-color: @component-title-background-color;
+    padding: (@component-title-margin / 2) @component-title-margin (@component-title-margin / 2) @component-title-margin;
+    margin-bottom: 0;
+  }
+
+  &__body {
+    padding: @component-body-margin;
+    background-color: @text-background-color;
+    margin-bottom: 0;
+  }
+
+  &__instruction {
+    padding: 0px @component-body-margin @component-body-margin @component-body-margin;
+    background-color: @text-background-color;
+		margin-bottom: 0;
+  }
+}
+
+// Buttons
+// --------------------------------------------------
+.btn {
+  &-text {
+    border: @button-border;
+
+    .no-touch &:not(.is-disabled):not(.is-locked):hover {
+      border-color: @button-border-color-hover;
+    }
+  }
+
+  &-text.is-disabled {
+		border-color: @button-border-color-disabled;
+  }
+
+  &-text.is-locked {
+    border-color: @button-border-color-disabled;
+  }
+}

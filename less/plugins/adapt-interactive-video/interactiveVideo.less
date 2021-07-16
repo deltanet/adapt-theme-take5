@@ -1,82 +1,8 @@
-.interactiveVideo-enabled {
-    .large-video-title {
-        .component-title {
-            color: #fff;
-            text-align: center;
-            @media all and (min-width: (@device-width-small + 20px)) {
-                font-size: 22px;
-                line-height: 180%;
-                font-weight: @font-weight-medium;
-            }
-        }
+.interactivevideo {
+  &__subtitles-btn {
+    border-radius: 0 0 0 @btn-border-radius;
+    .dir-rtl & {
+      border-radius: 0 0 @btn-border-radius 0;
     }
-
-    .large-video-body {
-        .component-body {
-            text-align: center;
-            @media all and (min-width: (@device-width-small + 20px)) {
-                font-size: 18px;
-                line-height: 160%;
-                padding: @component-padding * 2;
-            }
-        }
-
-        .component-instruction {
-          @media all and (min-width: (@device-width-small + 20px)) {
-            padding-left: @component-padding * 2;
-            padding-right: @component-padding * 2;
-          }
-        }
-
-        .component-instruction-inner {
-            text-align: center;
-            @media all and (min-width: (@device-width-small + 20px)) {
-                font-size: 16px;
-                line-height: 150%;
-            }
-        }
-    }
-
-    .smaller-width-block {
-        .block-inner {
-            max-width: @device-width-medium !important;
-        }
-    }
-
-    .large-width-block {
-        .block-inner {
-            max-width: @device-width-large !important;
-        }
-    }
-
-    .interactive-video-buttons-container {
-        margin: 0 @component-padding;
-        background-color: transparent;
-    }
-
-    .component-inner {
-        padding-bottom: 0;
-    }
-
-    .interactive-video-button {
-        min-width: 80px;
-    }
-
-    .extra-margin-top {
-        @media all and (min-width: (@device-width-medium + 20px)) {
-            margin-top: 0px;
-        }
-        @media all and (min-width:@device-width-large) {
-            margin-top: 60px;
-        }
-    }
-
-    .matching-iv-class {
-        .component-instruction {
-            margin-bottom: -10px !important;
-        }
-        .matching-item {
-            padding-bottom: 0px !important;
-        }
-    }
+  }
 }

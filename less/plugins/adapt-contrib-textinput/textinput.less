@@ -1,43 +1,42 @@
-.textinput-widget {
-    &.disabled {
-        .textinput-item {
-            border-color: @item-border-color-disabled;
-            background-color: @item-color-disabled;
-        }
-    }
-}
+.textinput {
+  &__item-prefix-container,
+  &__item-suffix-container {
+    text-align: center;
+  }
 
-.textinput-item {
-    background-color: @item-color;
+  &__item-textbox-container {
     position: relative;
-    border: @item-border;
-    margin-bottom: @item-margin-bottom;
+  }
 
-    .component-full & {
-        padding: 1%;
+  &__item-textbox {
+    padding: @item-padding (@icon-size + (@item-padding * 2)) @item-padding @item-padding;
+    line-height: @body-line-height;
+
+    .dir-rtl & {
+      padding-left: @icon-size + (@item-padding * 2);
+      padding-right: @item-padding;
     }
+  }
 
-    .component-left &,
-    .component-right & {
-        padding: 2%;
+  &__widget.is-disabled &__item-textbox {
+    background-color: @disabled;
+    border-color: @disabled;
+    color: @disabled-inverted;
+  }
+
+  &__widget.is-disabled &__item-icon {
+    color: @disabled-inverted;
+  }
+
+  &__item-state {
+    position: absolute;
+    top: 50%;
+    right: @item-padding;
+    .transform(translateY(-50%));
+
+    .dir-rtl & {
+      right: inherit;
+      left: @item-padding;
     }
-}
-
-.textinput-item-textbox {
-    height: 28px;
-    line-height: 28px;
-
-    &.textinput-validation-error {
-        border: 2px solid @validation-error;
-    }
-}
-
-.textinput-widget {
-    .textinput-correct-icon {
-        color: @validation-success;
-    }
-
-    .textinput-incorrect-icon {
-        color: @validation-error;
-    }
+  }
 }
