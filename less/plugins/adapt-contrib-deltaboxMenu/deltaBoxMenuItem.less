@@ -15,20 +15,9 @@
     border: none;
     padding: 0;
 
-    &:not(.is-locked) {
-      .deltaboxmenu-item__image-container {
-        &:hover {
-    			img {
-    				opacity: 0.5;
-    			}
-    		}
-      }
+    @media (max-width: @device-width-medium) {
+      margin: @item-padding;
     }
-  }
-
-  &__image-container {
-    margin-bottom: 0;
-    background-color: @btn-color-hover;
   }
 
   &__title {

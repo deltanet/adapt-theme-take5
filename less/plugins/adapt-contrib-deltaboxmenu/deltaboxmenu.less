@@ -11,24 +11,39 @@
   }
 
   &__title {
-    margin-bottom: @menu-title-margin;
     .menu-title;
-    color: @heading-color;
+    color: @page-title-text-color;
+    text-align: center;
+
+    &.add-margin {
+      margin-bottom: @menu-title-margin;
+    }
   }
 
   &__subtitle {
-    margin-bottom: @menu-subtitle-margin;
     .menu-subtitle;
+    color: @page-title-text-color;
+		text-align: center;
   }
 
   &__body {
-    margin-bottom: @menu-body-margin;
     .menu-body;
+    color: @page-title-text-color;
+		text-align: center;
+
+    &.add-margin {
+      margin-top: @menu-body-margin;
+    }
   }
 
   &__instruction {
-    margin-bottom: @menu-instruction-margin;
     .menu-instruction;
+		color: @page-title-text-color;
+		text-align: center;
+
+    &.add-margin {
+      margin-top: @menu-instruction-margin;
+    }
   }
 
   &__body a,

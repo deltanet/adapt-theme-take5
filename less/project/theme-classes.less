@@ -11,28 +11,6 @@
   min-height: 10px;
 }
 
-// Remove 'Show feedback' button on question component
-// Applied to assessment article
-// --------------------------------------------------
-.remove-showFeedback {
-  .btn__feedback {
-    display: none;
-  }
-  .btn__marking {
-    position: relative;
-    margin-top: -10px;
-    margin-bottom: 10px;
-  }
-  .btn__container {
-		text-align: center;
-
-		button {
-			float: none;
-			width: auto;
-		}
-  }
-}
-
 // Remove menu header if no title or body is used
 // --------------------------------------------------
 .remove-menu-header {
@@ -463,11 +441,11 @@ USAGE:   (Left) Interactive component / (Right) Graphic
 }
 ************************************************************************************/
 
-
-
+// Remove 'Show feedback' button on question component - Applied to assessment article
 // Class to center the submit button when feedback button isn't used
 // Class to remove the feedback button on a question component
 // --------------------------------------------------
+.remove-showFeedback,
 .single-submit-button,
 .remove-feedback-button {
 
@@ -475,13 +453,21 @@ USAGE:   (Left) Interactive component / (Right) Graphic
 		justify-content: center;
 	}
 
-	.btn__action {
-		@media all and (min-width: @device-width-medium) {
-			width: auto;
-			float: none;
-			margin-left: 0;
-			margin-right: 0;
+	.btn__marking {
+		left: @item-margin;
+		right: inherit;
+
+		.dir-rtl & {
+			left: inherit;
+			right: @item-margin;
 		}
+	}
+
+	.btn__action {
+		width: auto;
+		float: none;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
 	}
 }
 

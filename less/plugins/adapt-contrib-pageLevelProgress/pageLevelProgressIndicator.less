@@ -77,6 +77,10 @@
 .pagelevelprogress__item-btn {
   .pagelevelprogress__indicator {
     border-color: @drawer-progress-border;
+    margin: 0 0 0 calc(~'25% - 1rem');
+    .dir-rtl & {
+			margin: 0 calc(~'25% - 1rem') 0 0;
+    }
   }
 
   .pagelevelprogress__indicator-inner {

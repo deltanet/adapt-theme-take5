@@ -1,8 +1,23 @@
 .audio {
-	.audio__controls {
+	&__controls {
 	  border-radius: 0 @btn-border-radius 0 0;
 	  .dir-rtl & {
 	    border-radius: @btn-border-radius 0 0 0;
 	  }
 	}
+}
+
+.audio-drawer {
+  &__item-open {
+    background-color: @drawer-inactive-color;
+    color: @bespoke-drawer-text-color;
+  }
+
+	&__toggle {
+    color: @bespoke-drawer-text-color;
+
+    .no-touch &:hover {
+      color: @drawer-icon-inverted-hover;
+    }
+  }
 }

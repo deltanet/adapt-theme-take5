@@ -51,6 +51,10 @@ body {
 // Notify
 // --------------------------------------------------
 .notify {
+	// Fix for IE
+	z-index: auto !important;
+	//
+
 	&__popup {
 		@media all and (min-width: @device-width-medium) {
       max-width: @device-width-medium;
@@ -80,6 +84,16 @@ body {
 			.transition(color @duration ease-in, color @duration ease-in;);
 		}
 	}
+
+	@media all and (max-width: @device-width-medium) {
+		&__popup-inner {
+			padding-bottom: @notify-padding-ver - @btn-margin;
+		}
+
+		&__btn {
+			margin-bottom: @btn-margin;
+		}
+	}
 }
 
 // Buttons
@@ -91,26 +105,7 @@ body {
 // Menu
 // --------------------------------------------------
 .menu {
-  &__title {
-    color: @page-title-text-color;
-    text-align: center;
-  }
-
-	&__subtitle {
-		color: @page-title-text-color;
-		text-align: center;
-	}
-
-	&__body {
-		color: @page-title-text-color;
-		text-align: center;
-	}
-
-	&__instruction {
-		margin-top: 1rem;
-		color: @page-title-text-color;
-		text-align: center;
-	}
+  .l-container-responsive(@max-width);
 }
 
 // Page
@@ -144,7 +139,7 @@ body {
   background-color: @background;
 
 	@media all and (min-width: (@device-width-small + 20px)) {
-		min-height: @content-height;
+		min-height: 624px;
 	}
 
   &__header-inner {
@@ -176,6 +171,12 @@ body {
 // Block
 // --------------------------------------------------
 .block {
+	&__inner {
+		@media all and (max-width: @device-width-medium) {
+			padding: @block-padding-hoz @block-padding-hoz @block-padding-ver @block-padding-hoz;
+		}
+  }
+
   &__title {
     color: @block-title-text-color;
     background-color: @block-title-background-color;
