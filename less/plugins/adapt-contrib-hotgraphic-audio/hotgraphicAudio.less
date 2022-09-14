@@ -3,10 +3,12 @@
     background-color: @item-color;
     color: @item-color-inverted;
     border-radius: 50%;
+    border: 2px solid @item-color-inverted;
 
     .no-touch &:hover {
       background-color: @item-color-hover;
       color: @item-color-inverted-hover;
+      border: 2px solid @item-color-inverted-hover;
       .transition(background-color @duration ease-in, color @duration ease-in;);
     }
   }
@@ -14,6 +16,7 @@
   &__pin:not(.has-pin-image).is-visited {
     background-color: @visited;
     color: @visited-inverted;
+    border: 2px solid @visited-inverted;
   }
 
   // Numbered pins
@@ -24,5 +27,17 @@
     line-height: @body-size;
     text-align: center;
     font-weight: @font-weight-bold;
+  }
+
+  // Hotgraphic as tiles
+  // --------------------------------------------------
+  &__tile-item {
+    width: auto;
+  }
+
+  &__tile.is-visited .icon {
+    background-color: @visited;
+    color: @visited-inverted;
+    border-radius: 50%;
   }
 }

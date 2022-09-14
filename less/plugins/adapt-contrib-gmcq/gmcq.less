@@ -1,59 +1,19 @@
-.gmcq {
-  &__item-label {
+.gmcq-item {
+  &__label {
     margin: @item-margin;
   }
 
-  &__item-image {
+  &__image {
     min-width: 0;
     margin-left: auto;
     margin-right: auto;
   }
 
-  // Layout #1
-  // --------------------------------------------------
-  /*
-  &__item-option {
-    margin-top: @item-margin;
-    padding: @item-padding / 2;
-    background-color: @item-color;
-    color: @item-color-inverted;
-    border-radius: @item-border-radius;
-  }
-
-  .no-touch &__item-label:not(.is-disabled):not(.is-selected):hover .gmcq__item-option,
-  html:not(.a11y-disable-focusoutline) .gmcq__item-input:focus + &__item-label &__item-option {
-    background-color: @item-color-hover;
-    color: @item-color-inverted-hover;
-    .transition(background-color @duration ease-in, color @duration ease-in;);
-  }
-
-  &__item-label.is-disabled .gmcq__item-option {
-    background-color: @disabled;
-    color: @disabled-inverted;
-  }
-
-  &__item-label.is-selected .gmcq__item-option {
-    background-color: @item-color-selected;
-    color: @item-color-inverted-selected;
-  }
-
-  &__item-state {
-    min-height: @icon-size;
-  }
-
-  &__item-text {
-    margin-top: @item-margin;
-    text-align: center;
-  }
-  */
-
-  // Layout #2
-  // --------------------------------------------------
-  &__item-option {
+  &__option {
     position: relative;
   }
 
-  &__item-state {
+  &__state {
     position: absolute;
     top: 50%;
     left: @item-padding;
@@ -65,7 +25,7 @@
     }
   }
 
-  &__item-text {
+  &__text {
     padding: @item-padding @item-padding @item-padding (@icon-size + (@item-padding * 2));
 
     .dir-rtl & {
@@ -74,30 +34,29 @@
     }
   }
 
-  &__item-label.is-disabled .gmcq__item-option {
+  &__label.is-disabled .gmcq-item__option {
     background-color: @disabled;
     color: @disabled-inverted;
   }
 
-  &__item.is-correct {
-    .gmcq__item-label.is-selected .gmcq__item-option {
+  &.is-correct {
+    .gmcq-item__label.is-selected .gmcq-item__option {
       background-color: @validation-success;
       color: @validation-success-inverted;
     }
   }
 
-  &__item.is-incorrect {
-    .gmcq__item-label.is-selected .gmcq__item-option {
+  &.is-incorrect {
+    .gmcq-item__label.is-selected .gmcq-item__option {
       background-color: @validation-error;
       color: @validation-error-inverted;
     }
   }
 
   &__widget.show-correct-answer {
-    .gmcq__item-label.is-selected .gmcq__item-option {
+    .gmcq-item__label.is-selected .gmcq-item__option {
       background-color: @validation-success;
       color: @validation-success-inverted;
     }
   }
-
 }

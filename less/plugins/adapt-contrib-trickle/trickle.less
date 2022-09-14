@@ -8,4 +8,16 @@
     display: inline-block;
     vertical-align: middle;
   }
+
+  &__btn {
+    &.btn-icon {
+      color: @btn-color-inverted;
+      background-color: @btn-color;
+
+      .no-touch &:hover {
+        color: @btn-color-inverted-hover;
+        background-color: @btn-color-hover;
+      }
+    }
+  }
 }

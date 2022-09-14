@@ -1,0 +1,21 @@
+.abs {
+	&.is-fullwidth {
+		.abs__btn-arrow {
+      &.is-right {
+        border-radius: @btn-border-radius 0 0 @btn-border-radius;
+
+        .dir-rtl & {
+          border-radius: 0 @btn-border-radius @btn-border-radius 0;
+        }
+      }
+
+      &.is-left {
+        border-radius: 0 @btn-border-radius @btn-border-radius 0;
+
+        .dir-rtl & {
+          border-radius: @btn-border-radius 0 0 @btn-border-radius;
+        }
+      }
+		}
+	}
+}

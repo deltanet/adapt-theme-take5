@@ -1,0 +1,38 @@
+.ppq-audio {
+
+  .ppq-pin {
+    .no-touch &:hover {
+    	.ppq-icon {
+        border: 2px solid @item-color-inverted-hover;
+    	}
+    }
+  }
+
+  .ppq-icon {
+    border: 2px solid @item-color-inverted;
+
+    &.ppq-correct-icon {
+      border: 2px solid @validation-success-inverted;
+    }
+
+    &.ppq-incorrect-icon {
+      border: 2px solid @validation-error-inverted;
+    }
+  }
+
+  .ppq__widget {
+    &.is-submitted {
+      .ppq-pin {
+        .no-touch &:hover {
+          .ppq-correct-icon {
+            border: 2px solid @validation-success-inverted;
+          }
+
+          .ppq-incorrect-icon {
+            border: 2px solid @validation-error-inverted;
+          }
+        }
+      }
+    }
+  }
+}

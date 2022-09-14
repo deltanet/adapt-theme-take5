@@ -1,31 +1,15 @@
 .hotgraphicaudio-popup {
-  &__controls,
-  &__close {
-    padding: @btn-padding / 2;
-    background-color: @notify-icon;
-    color: @notify-icon-inverted;
-
-    .no-touch &:hover {
-      background-color: @notify-icon-hover;
-      color: @notify-icon-inverted-hover;
-      .transition(background-color @duration ease-in, color @duration ease-in;);
-    }
+  &.has-img-zoom &-item__image-container {
+    .img-zoom();
   }
+}
 
-  &__controls {
-    padding: @btn-padding;
-  }
-
-  &__item-title {
-    margin-bottom: @notify-title-margin;
-    .notify-title;
-  }
-
-  &__item-body {
+.hotgraphicaudio-popup-item {
+  &__body {
     margin-bottom: @notify-body-margin;
   }
 
-  &__item-body a {
+  &__body a {
     .link-text;
     color: @notify-link;
 
@@ -33,9 +17,5 @@
       color: @notify-link-hover;
       .transition(color @duration ease-in);
     }
-  }
-
-  .hotgraphic.has-img-zoom &__item-image-container {
-    .img-zoom();
   }
 }
