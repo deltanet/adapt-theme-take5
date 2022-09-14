@@ -6,17 +6,28 @@
   }
 
   &__title {
-    margin-bottom: @page-title-margin;
+    margin-bottom: @page-body-margin;
     .page-title;
+    text-align: center;
+    color: @page-title-text-color;
   }
 
   &__body {
     margin-bottom: @page-body-margin;
     .page-body;
+    text-align: center;
+    color: @page-title-text-color;
   }
 
   &__body a {
     .link-text;
+  }
+
+  &__instruction {
+    margin-bottom: @page-instruction-margin;
+    .page-instruction;
+    text-align: center;
+    color: @page-title-text-color;
   }
 
   &__languages-inner {

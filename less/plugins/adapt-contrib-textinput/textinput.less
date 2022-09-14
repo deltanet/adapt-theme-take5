@@ -1,4 +1,12 @@
 .textinput {
+  &__item {
+    margin-bottom: @item-margin / 2;
+    background-color: @item-color-selected;
+    color: @item-color-inverted-selected;
+    border-radius: @item-border-radius;
+    padding: @item-padding;
+  }
+
   &__item-prefix-container,
   &__item-suffix-container {
     text-align: center;

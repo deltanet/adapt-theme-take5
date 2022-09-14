@@ -1,4 +1,24 @@
 .scenario-audio {
+  &__content-title {
+    margin-bottom: @item-title-margin;
+    .item-title;
+  }
+
+  &__content-body a {
+    .link-text;
+  }
+
+  &__controls {
+    background-color: @item-color;
+    color: @item-color-inverted;
+
+    .no-touch &:hover {
+      background-color: @item-color-hover;
+      color: @item-color-inverted-hover;
+      .transition(background-color @duration ease-in, color @duration ease-in;);
+    }
+  }
+
   &__progress {
     background-color: @item-color;
     border-radius: 50%;
@@ -37,12 +57,15 @@
     color: @visited-inverted;
   }
 
-  &__content {
-    color: @component-title-text-color;
-    background-color: @component-title-background-color;
+  &.has-img-zoom &__slider-image-container {
+    .img-zoom();
   }
 
-  &__control-left {
+  &__widget {
+    background: @font-color-inverted;
+  }
+
+  &__controls-left {
     border-radius: 0 @btn-border-radius @btn-border-radius 0;
 
     .dir-rtl & {
@@ -50,7 +73,7 @@
     }
   }
 
-  &__control-right {
+  &__controls-right {
     border-radius: @btn-border-radius 0 0 @btn-border-radius;
 
     .dir-rtl & {
@@ -58,4 +81,12 @@
     }
   }
 
+  &__slide-container {
+    background-color: @component-title-background-color;
+  }
+
+  &__content {
+    color: @component-title-text-color;
+    background-color: @component-title-background-color;
+  }
 }

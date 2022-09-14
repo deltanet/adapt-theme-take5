@@ -1,5 +1,36 @@
 .hotspotmenu {
   &__header {
-    background-color: @page-title-background-color;
+		color: @page-title-text-color;
+		background-color: @page-title-background-color;
+	}
+
+	&__title {
+		.menu-title;
+		color: @page-title-text-color;
+		text-align: center;
+	}
+
+	&__subtitle {
+		.menu-subtitle;
+		color: @page-title-text-color;
+		text-align: center;
+	}
+
+	&__body {
+		.menu-body;
+		color: @page-title-text-color;
+		text-align: center;
+	}
+
+	&__instruction {
+		.menu-instruction;
+		color: @page-title-text-color;
+		text-align: center;
+	}
+
+  &__body a,
+	&__subtitle a,
+  &__instruction a {
+    .link-text;
   }
 }

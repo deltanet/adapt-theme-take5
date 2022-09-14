@@ -1,0 +1,36 @@
+.gridmenu {
+
+  &__title {
+    .menu-title;
+		color: @page-title-text-color;
+    text-align: center;
+  }
+
+  &__subtitle {
+    .menu-subtitle;
+		color: @page-title-text-color;
+		text-align: center;
+  }
+
+  &__body {
+		.menu-body;
+		margin-top: @menu-title-margin;
+    margin-bottom: @menu-body-margin;
+		color: @page-title-text-color;
+		text-align: center;
+  }
+
+  &__instruction {
+    .menu-instruction;
+		margin-top: @menu-instruction-margin;
+		margin-bottom: @menu-instruction-margin;
+		color: @page-title-text-color;
+		text-align: center;
+  }
+
+  &__body a,
+	&__subtitle a,
+  &__instruction a {
+    .link-text;
+  }
+}
